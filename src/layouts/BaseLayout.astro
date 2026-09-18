@@ -1,0 +1,89 @@
+---
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import { siteMetadata } from '../data/siteMetadata';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+  currentPath?: string;
+}
+
+const {
+  title = siteMetadata.title,
+  description = siteMetadata.description,
+  ogImage = '/assets/backgrounds/hero-editorial.jpg',
+  currentPath = Astro.url.pathname,
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, siteMetadata.url);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="author" content={siteMetadata.author} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(ogImage, siteMetadata.url)} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(ogImage, siteMetadata.url)} />
+
+    <!-- Anti-FOUC Blocking Theme Initialization Script -->
+    <script is:inline>
+      (function() {
+        const stored = localStorage.getItem('theme') || 'system';
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const isDark = stored === 'dark' || (stored === 'system' && prefersDark);
+        if (isDark) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+        document.documentElement.setAttribute('data-theme', stored);
+      })();
+    </script>
+
+    <!-- Typography: Geist & Geist Mono with Inter & JetBrains Mono fallbacks -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  </head>
+  <body class="min-h-screen flex flex-col bg-[#F7F7F5] dark:bg-[#111111] text-[#111111] dark:text-[#F5F5F2] antialiased selection:bg-[#3157FF] dark:selection:bg-[#6B82FF] selection:text-white transition-colors duration-200">
+    <!-- Accessible Skip Link -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50 px-4 py-2 bg-[#111111] dark:bg-[#F5F5F2] text-white dark:text-[#111111] text-xs font-mono uppercase tracking-wider rounded border border-[#30302D] shadow-sm">
+      Skip to main content
+    </a>
+
+    <!-- Top Navigation -->
+    <Navigation currentPath={currentPath} />
+
+    <!-- Main Page Content -->
+    <main id="main-content" class="flex-grow">
+      <slot />
+    </main>
+
+    <!-- Site Footer -->
+    <Footer />
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" fill="none">
+  <defs>
+    <pattern id="wbGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#262628" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+
+  <rect width="900" height="200" rx="12" fill="#0E0E10" stroke="#222225" stroke-width="1"/>
+  <rect width="900" height="200" rx="12" fill="url(#wbGrid)" opacity="0.4"/>
+
+  <text x="24" y="30" fill="#8E8E93" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" letter-spacing="1.5">WELLBEING NUTRITION // CRO FUNNEL &amp; SUBSCRIPTION UX ARCHITECTURE</text>
+
+  <!-- Funnel Stages -->
+  <g transform="translate(30, 56)">
+    <!-- Stage 1 -->
+    <rect width="145" height="90" rx="8" fill="#161618" stroke="#2A2A2E" stroke-width="1"/>
+    <text x="14" y="24" fill="#6B6B6B" font-family="'JetBrains Mono', monospace" font-size="10">STAGE 01</text>
+    <text x="14" y="48" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="14" font-weight="700">Audit &amp; Data</text>
+    <text x="14" y="68" fill="#8E8E93" font-family="'Inter', sans-serif" font-size="11">Heatmaps &amp; Drop-offs</text>
+    <text x="14" y="82" fill="#55555A" font-family="'Inter', sans-serif" font-size="10">Mobile Cart Analysis</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <path d="M185 101 H210" stroke="#3157FF" stroke-width="1.5"/>
+  <polygon points="212,101 206,98 206,104" fill="#3157FF"/>
+
+  <!-- Stage 2 -->
+  <g transform="translate(215, 56)">
+    <rect width="145" height="90" rx="8" fill="#161618" stroke="#2A2A2E" stroke-width="1"/>
+    <text x="14" y="24" fill="#6B6B6B" font-family="'JetBrains Mono', monospace" font-size="10">STAGE 02</text>
+    <text x="14" y="48" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="14" font-weight="700">Hypothesis</text>
+    <text x="14" y="68" fill="#8E8E93" font-family="'Inter', sans-serif" font-size="11">Friction Reduction</text>
+    <text x="14" y="82" fill="#55555A" font-family="'Inter', sans-serif" font-size="10">Transparency Upfront</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <path d="M370 101 H395" stroke="#3157FF" stroke-width="1.5"/>
+  <polygon points="397,101 391,98 391,104" fill="#3157FF"/>
+
+  <!-- Stage 3 -->
+  <g transform="translate(400, 56)">
+    <rect width="155" height="90" rx="8" fill="#161618" stroke="#3157FF" stroke-width="1.25"/>
+    <text x="14" y="24" fill="#3157FF" font-family="'JetBrains Mono', monospace" font-size="10">STAGE 03</text>
+    <text x="14" y="48" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="14" font-weight="700">Sub Selector</text>
+    <text x="14" y="68" fill="#8E8E93" font-family="'Inter', sans-serif" font-size="11">Tiered Plan Comparison</text>
+    <text x="14" y="82" fill="#3157FF" font-family="'Inter', sans-serif" font-size="10">Default 60-Day Value</text>
+  </g>
+
+  <!-- Arrow 3 -->
+  <path d="M565 101 H590" stroke="#3157FF" stroke-width="1.5"/>
+  <polygon points="592,101 586,98 586,104" fill="#3157FF"/>
+
+  <!-- Stage 4 -->
+  <g transform="translate(595, 56)">
+    <rect width="145" height="90" rx="8" fill="#161618" stroke="#2A2A2E" stroke-width="1"/>
+    <text x="14" y="24" fill="#6B6B6B" font-family="'JetBrains Mono', monospace" font-size="10">STAGE 04</text>
+    <text x="14" y="48" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="14" font-weight="700">Sticky CTA</text>
+    <text x="14" y="68" fill="#8E8E93" font-family="'Inter', sans-serif" font-size="11">Zero Mobile Clutter</text>
+    <text x="14" y="82" fill="#55555A" font-family="'Inter', sans-serif" font-size="10">1-Tap Cart Entry</text>
+  </g>
+
+  <!-- Arrow 4 -->
+  <path d="M750 101 H775" stroke="#3157FF" stroke-width="1.5"/>
+  <polygon points="777,101 771,98 771,104" fill="#3157FF"/>
+
+  <!-- Stage 5 -->
+  <g transform="translate(780, 56)">
+    <rect width="90" height="90" rx="8" fill="#1A1A22" stroke="#10B981" stroke-width="1.25"/>
+    <text x="10" y="24" fill="#10B981" font-family="'JetBrains Mono', monospace" font-size="10">OUTCOME</text>
+    <text x="10" y="48" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="13" font-weight="700">CRO Spec</text>
+    <text x="10" y="68" fill="#8E8E93" font-family="'Inter', sans-serif" font-size="10">A/B Testing</text>
+    <text x="10" y="82" fill="#10B981" font-family="'Inter', sans-serif" font-size="10">Ready</text>
+  </g>
+</svg>

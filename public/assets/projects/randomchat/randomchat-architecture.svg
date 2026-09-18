@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" fill="none">
+  <defs>
+    <pattern id="archGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#262628" stroke-width="0.5"/>
+    </pattern>
+    <linearGradient id="blueGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3157FF" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#00D2FF" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Container Box -->
+  <rect width="900" height="220" rx="12" fill="#0E0E10" stroke="#222225" stroke-width="1"/>
+  <rect width="900" height="220" rx="12" fill="url(#archGrid)" opacity="0.5"/>
+
+  <!-- Top bar / label -->
+  <text x="24" y="32" fill="#8E8E93" font-family="'JetBrains Mono', 'SF Mono', monospace" font-size="11" font-weight="600" letter-spacing="1.5">RANDOMCHAT // EDGE ARCHITECTURE PIPELINE</text>
+  <circle cx="860" cy="28" r="4" fill="#10B981"/>
+  <text x="836" y="32" fill="#10B981" font-family="'JetBrains Mono', monospace" font-size="10" text-anchor="end">EDGE LIVE</text>
+
+  <!-- Flow Nodes -->
+  <!-- 01: USER -->
+  <g transform="translate(30, 65)">
+    <rect width="110" height="85" rx="8" fill="#161618" stroke="#2A2A2E" stroke-width="1"/>
+    <text x="16" y="30" fill="#6B6B6B" font-family="'JetBrains Mono', monospace" font-size="10">01 / CLIENT</text>
+    <text x="16" y="52" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="14" font-weight="700">Visitor</text>
+    <text x="16" y="70" fill="#8E8E93" font-family="'Inter', sans-serif" font-size="11">Browser Session</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <path d="M140 107 H170" stroke="#3157FF" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <polygon points="172,107 166,104 166,110" fill="#3157FF"/>
+
+  <!-- 02: WEB APP -->
+  <g transform="translate(175, 65)">
+    <rect width="115" height="85" rx="8" fill="#161618" stroke="#2A2A2E" stroke-width="1"/>
+    <text x="16" y="30" fill="#6B6B6B" font-family="'JetBrains Mono', monospace" font-size="10">02 / FRONTEND</text>
+    <text x="16" y="52" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="14" font-weight="700">Astro SSR</text>
+    <text x="16" y="70" fill="#8E8E93" font-family="'Inter', sans-serif" font-size="11">Tailwind + Islands</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <path d="M290 107 H320" stroke="#3157FF" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <polygon points="322,107 316,104 316,110" fill="#3157FF"/>
+
+  <!-- 03: WEBSOCKET -->
+  <g transform="translate(325, 65)">
+    <rect width="120" height="85" rx="8" fill="#161618" stroke="#3157FF" stroke-width="1.25"/>
+    <text x="16" y="30" fill="#3157FF" font-family="'JetBrains Mono', monospace" font-size="10">03 / TRANSPORT</text>
+    <text x="16" y="52" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="14" font-weight="700">WebSocket</text>
+    <text x="16" y="70" fill="#8E8E93" font-family="'Inter', sans-serif" font-size="11">Full-Duplex WSS</text>
+  </g>
+
+  <!-- Arrow 3 -->
+  <path d="M445 107 H475" stroke="#3157FF" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <polygon points="477,107 471,104 471,110" fill="#3157FF"/>
+
+  <!-- 04: CLOUDFLARE WORKER -->
+  <g transform="translate(480, 65)">
+    <rect width="125" height="85" rx="8" fill="#161618" stroke="#2A2A2E" stroke-width="1"/>
+    <text x="16" y="30" fill="#6B6B6B" font-family="'JetBrains Mono', monospace" font-size="10">04 / EDGE RUNTIME</text>
+    <text x="16" y="52" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="13" font-weight="700">CF Worker</text>
+    <text x="16" y="70" fill="#8E8E93" font-family="'Inter', sans-serif" font-size="11">Global Routing</text>
+  </g>
+
+  <!-- Arrow 4 -->
+  <path d="M605 107 H635" stroke="#3157FF" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <polygon points="637,107 631,104 631,110" fill="#3157FF"/>
+
+  <!-- 05: DURABLE OBJECT -->
+  <g transform="translate(640, 65)">
+    <rect width="115" height="85" rx="8" fill="#161618" stroke="#3157FF" stroke-width="1.25"/>
+    <text x="14" y="30" fill="#3157FF" font-family="'JetBrains Mono', monospace" font-size="10">05 / STATE ENGINE</text>
+    <text x="14" y="52" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="13" font-weight="700">Durable Obj</text>
+    <text x="14" y="70" fill="#8E8E93" font-family="'Inter', sans-serif" font-size="11">In-Memory Rooms</text>
+  </g>
+
+  <!-- Arrow 5 -->
+  <path d="M755 107 H780" stroke="#3157FF" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <polygon points="782,107 776,104 776,110" fill="#3157FF"/>
+
+  <!-- 06: REAL-TIME CHAT -->
+  <g transform="translate(785, 65)">
+    <rect width="90" height="85" rx="8" fill="#1A1A1E" stroke="#3A3A40" stroke-width="1"/>
+    <text x="12" y="30" fill="#6B6B6B" font-family="'JetBrains Mono', monospace" font-size="10">06 / OUTPUT</text>
+    <text x="12" y="52" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="13" font-weight="700">Live Chat</text>
+    <text x="12" y="70" fill="#8E8E93" font-family="'Inter', sans-serif" font-size="11">Direct Socket</text>
+  </g>
+
+  <!-- Bottom Details -->
+  <text x="24" y="190" fill="#55555A" font-family="'JetBrains Mono', monospace" font-size="11">Zero Database Persistence • Ephemeral In-Memory State • Strict Disconnect Cleanup</text>
+</svg>

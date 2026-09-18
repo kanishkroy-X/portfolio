@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" fill="none">
+  <defs>
+    <pattern id="analystGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#262628" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+
+  <rect width="900" height="200" rx="12" fill="#0E0E10" stroke="#222225" stroke-width="1"/>
+  <rect width="900" height="200" rx="12" fill="url(#analystGrid)" opacity="0.4"/>
+
+  <text x="24" y="30" fill="#8E8E93" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" letter-spacing="1.5">AI RESEARCH ANALYST // DETERMINISTIC VERIFICATION PIPELINE</text>
+
+  <!-- Node 1: Input Query -->
+  <g transform="translate(30, 56)">
+    <rect width="140" height="90" rx="8" fill="#161618" stroke="#2A2A2E" stroke-width="1"/>
+    <text x="14" y="24" fill="#6B6B6B" font-family="'JetBrains Mono', monospace" font-size="10">01 / INPUT</text>
+    <text x="14" y="48" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="14" font-weight="700">Business Idea</text>
+    <text x="14" y="68" fill="#8E8E93" font-family="'Inter', sans-serif" font-size="11">Strategic Query</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <path d="M180 101 H210" stroke="#3157FF" stroke-width="1.5"/>
+  <polygon points="212,101 206,98 206,104" fill="#3157FF"/>
+
+  <!-- Node 2: Multi-Query Search -->
+  <g transform="translate(215, 56)">
+    <rect width="150" height="90" rx="8" fill="#161618" stroke="#2A2A2E" stroke-width="1"/>
+    <text x="14" y="24" fill="#6B6B6B" font-family="'JetBrains Mono', monospace" font-size="10">02 / DISCOVERY</text>
+    <text x="14" y="48" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="14" font-weight="700">Tavily Engine</text>
+    <text x="14" y="68" fill="#8E8E93" font-family="'Inter', sans-serif" font-size="11">Live Web Research</text>
+    <text x="14" y="82" fill="#55555A" font-family="'Inter', sans-serif" font-size="10">URL Deduplication</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <path d="M375 101 H405" stroke="#3157FF" stroke-width="1.5"/>
+  <polygon points="407,101 401,98 401,104" fill="#3157FF"/>
+
+  <!-- Node 3: Deterministic Verifier Gate -->
+  <g transform="translate(410, 56)">
+    <rect width="170" height="90" rx="8" fill="#161618" stroke="#3157FF" stroke-width="1.5"/>
+    <text x="14" y="24" fill="#3157FF" font-family="'JetBrains Mono', monospace" font-size="10">03 / GATE</text>
+    <text x="14" y="48" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="14" font-weight="700">Verifier Gate</text>
+    <text x="14" y="68" fill="#8E8E93" font-family="'Inter', sans-serif" font-size="11">Prunes Hallucinations</text>
+    <text x="14" y="82" fill="#10B981" font-family="'Inter', sans-serif" font-size="10">100% Grounded Excerpts</text>
+  </g>
+
+  <!-- Arrow 3 -->
+  <path d="M590 101 H620" stroke="#3157FF" stroke-width="1.5"/>
+  <polygon points="622,101 616,98 616,104" fill="#3157FF"/>
+
+  <!-- Node 4: Synthesis & Claim Classifier -->
+  <g transform="translate(625, 56)">
+    <rect width="245" height="90" rx="8" fill="#1A1A20" stroke="#2A2A2E" stroke-width="1"/>
+    <text x="14" y="24" fill="#6B6B6B" font-family="'JetBrains Mono', monospace" font-size="10">04 / STRUCTURED REPORT</text>
+    <text x="14" y="48" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="14" font-weight="700">Claims Taxonomy</text>
+    <text x="14" y="68" fill="#8E8E93" font-family="'Inter', sans-serif" font-size="11">Evidence • Inference • Analysis</text>
+    <text x="14" y="82" fill="#8E8E93" font-family="'Inter', sans-serif" font-size="11">Inspector Modal &amp; Source Audit</text>
+  </g>
+</svg>

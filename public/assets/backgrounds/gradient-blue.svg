@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="none">
+  <defs>
+    <radialGradient id="blueAtmosphere" cx="30%" cy="30%" r="60%" fx="25%" fy="25%">
+      <stop offset="0%" stop-color="#3157FF" stop-opacity="0.16"/>
+      <stop offset="45%" stop-color="#3157FF" stop-opacity="0.05"/>
+      <stop offset="80%" stop-color="#F7F7F5" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#F7F7F5" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#blueAtmosphere)"/>
+</svg>

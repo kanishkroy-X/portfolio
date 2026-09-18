@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 180" fill="none">
+  <!-- Editorial Quote Asset -->
+  <text x="10" y="44" fill="currentColor" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="28" font-weight="800" letter-spacing="-0.5">SAME</text>
+  <text x="10" y="82" fill="currentColor" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="28" font-weight="800" letter-spacing="-0.5">CURIOSITY.</text>
+  <text x="10" y="120" fill="currentColor" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="28" font-weight="800" letter-spacing="-0.5">DIFFERENT FORMS.</text>
+  <!-- Author Attribution -->
+  <line x1="12" y1="152" x2="36" y2="152" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+  <text x="46" y="156" fill="currentColor" opacity="0.6" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="600" letter-spacing="2">KR</text>
+  <!-- Subtle blue dot accent -->
+  <circle cx="86" cy="152" r="2.5" fill="#3157FF"/>
+</svg>

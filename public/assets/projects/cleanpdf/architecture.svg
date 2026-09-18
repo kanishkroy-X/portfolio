@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" fill="none">
+  <defs>
+    <pattern id="cleanGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#262628" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+
+  <rect width="900" height="200" rx="12" fill="#0E0E10" stroke="#222225" stroke-width="1"/>
+  <rect width="900" height="200" rx="12" fill="url(#cleanGrid)" opacity="0.4"/>
+
+  <text x="24" y="30" fill="#8E8E93" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" letter-spacing="1.5">CLEANPDF // ZERO-SERVER IN-BROWSER WASM ARCHITECTURE</text>
+
+  <!-- Flow -->
+  <g transform="translate(30, 56)">
+    <!-- 01 Input -->
+    <rect width="180" height="90" rx="8" fill="#161618" stroke="#2A2A2E" stroke-width="1"/>
+    <text x="14" y="24" fill="#6B6B6B" font-family="'JetBrains Mono', monospace" font-size="10">01 / LOCAL INTAKE</text>
+    <text x="14" y="48" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="14" font-weight="700">Confidential PDF</text>
+    <text x="14" y="68" fill="#8E8E93" font-family="'Inter', sans-serif" font-size="11">Drag &amp; Drop into Client</text>
+    <text x="14" y="82" fill="#10B981" font-family="'Inter', sans-serif" font-size="10">0 Bytes Sent Over Wire</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <path d="M220 101 H250" stroke="#3157FF" stroke-width="1.5"/>
+  <polygon points="252,101 246,98 246,104" fill="#3157FF"/>
+
+  <!-- 02 Processing Engine -->
+  <g transform="translate(255, 56)">
+    <rect width="320" height="90" rx="8" fill="#161618" stroke="#3157FF" stroke-width="1.5"/>
+    <text x="14" y="24" fill="#3157FF" font-family="'JetBrains Mono', monospace" font-size="10">02 / SANDBOXED CLIENT ENGINE</text>
+    <text x="14" y="48" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="14" font-weight="700">WebAssembly + PDF-Lib</text>
+    <text x="14" y="68" fill="#8E8E93" font-family="'Inter', sans-serif" font-size="11">Compress • Merge • Watermark • Redact</text>
+    <text x="14" y="82" fill="#3157FF" font-family="'Inter', sans-serif" font-size="10">Executed 100% in RAM via Web Worker</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <path d="M585 101 H615" stroke="#3157FF" stroke-width="1.5"/>
+  <polygon points="617,101 611,98 611,104" fill="#3157FF"/>
+
+  <!-- 03 Output -->
+  <g transform="translate(620, 56)">
+    <rect width="250" height="90" rx="8" fill="#1A1A22" stroke="#10B981" stroke-width="1.25"/>
+    <text x="14" y="24" fill="#10B981" font-family="'JetBrains Mono', monospace" font-size="10">03 / INSTANT DISCHARGE</text>
+    <text x="14" y="48" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="14" font-weight="700">Direct File Download</text>
+    <text x="14" y="68" fill="#8E8E93" font-family="'Inter', sans-serif" font-size="11">Local Blob URL Generation</text>
+    <text x="14" y="82" fill="#10B981" font-family="'Inter', sans-serif" font-size="10">RAM Cleaned on Tab Close</text>
+  </g>
+</svg>

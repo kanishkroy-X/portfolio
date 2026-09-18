@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import FeaturedRandomChat from '../components/FeaturedRandomChat.astro';
+import FeaturedAiAdStudio from '../components/FeaturedAiAdStudio.astro';
+import SupportingWork from '../components/SupportingWork.astro';
+import HowIWork from '../components/HowIWork.astro';
+import AboutSection from '../components/AboutSection.astro';
+import CurrentlySection from '../components/CurrentlySection.astro';
+import ContactSection from '../components/ContactSection.astro';
+import Divider from '../components/Divider.astro';
+---
+
+<BaseLayout
+  title="Kanishk Roy — Digital Products & AI-Powered Systems"
+  description="I build digital products & AI-powered systems. Product thinking × AI × hands-on execution. Portfolio and studio archive of Kanishk Roy."
+>
+  <!-- Hero Section -->
+  <Hero />
+
+  <!-- Featured Technical System: RandomChat -->
+  <FeaturedRandomChat />
+
+  <!-- Featured Creative System: AI Ad Production Studio -->
+  <FeaturedAiAdStudio />
+
+  <!-- Section Divider -->
+  <Divider class="py-12" />
+
+  <!-- Supporting Work Archive (AI Research Analyst, Wellbeing Nutrition, CleanPDF) -->
+  <SupportingWork />
+
+  <!-- How I Work (6-Stage Method) -->
+  <HowIWork />
+
+  <!-- Section Divider -->
+  <Divider class="py-10" />
+
+  <!-- About & Philosophy (Dark Section with Film Grain) -->
+  <AboutSection />
+
+  <!-- Current Focus & Lab Log -->
+  <CurrentlySection />
+
+  <!-- Contact & Collaboration -->
+  <ContactSection />
+</BaseLayout>

@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { siteMetadata } from '../data/siteMetadata';
+---
+
+<BaseLayout
+  title="Contact & Start a Conversation | Kanishk Roy"
+  description="Contact Kanishk Roy for digital product engineering, AI pipeline development, and commercial creative direction."
+>
+  <div class="max-w-[1100px] mx-auto px-6 py-16 md:py-24 transition-colors">
+    <div class="max-w-3xl mb-16">
+      <div class="text-xs font-mono text-[#3157FF] dark:text-[#6B82FF] tracking-[0.2em] uppercase font-bold mb-3">
+        COMMUNICATION &amp; INQUIRIES
+      </div>
+      <h1 class="text-4xl sm:text-6xl font-extrabold text-[#111111] dark:text-[#F5F5F2] tracking-tight leading-[1.08] mb-6">
+        Let's talk about what you are building.
+      </h1>
+      <p class="text-xl text-[#6B6B6B] dark:text-[#A3A3A0] leading-relaxed">
+        I collaborate with founders, product teams, and brands looking to build resilient software systems or produce cutting-edge commercial video.
+      </p>
+    </div>
+
+    <!-- Direct Action Card -->
+    <div class="p-8 sm:p-12 rounded-2xl border border-[#DCDCD8] dark:border-[#30302D] bg-white dark:bg-[#181818] shadow-xs mb-16 transition-colors">
+      <div class="max-w-xl">
+        <div class="text-xs font-mono text-[#8E8E93] dark:text-[#777774] uppercase mb-2">PRIMARY CONTACT METHOD</div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-[#111111] dark:text-[#F5F5F2] mb-4">Direct Email</h2>
+        <p class="text-sm text-[#6B6B6B] dark:text-[#A3A3A0] leading-relaxed mb-8">
+          The fastest way to reach me is directly by email. I respond promptly to project briefs, technical questions, and collaboration inquiries.
+        </p>
+        <a
+          href={`mailto:${siteMetadata.email}`}
+          class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#111111] dark:bg-[#F5F5F2] text-white dark:text-[#111111] text-base font-semibold hover:bg-[#3157FF] dark:hover:bg-[#6B82FF] hover:text-white transition-all duration-200 shadow-md group"
+        >
+          <span>START A CONVERSATION</span>
+          <span class="group-hover:translate-x-1 transition-transform">→</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Verified Channels & Info -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-xs font-mono">
+      <!-- LinkedIn -->
+      <div class="p-6 rounded-xl border border-[#DCDCD8] dark:border-[#30302D] bg-white/70 dark:bg-[#181818]/80 transition-colors">
+        <div class="text-[#8E8E93] dark:text-[#777774] uppercase mb-2">Professional Network</div>
+        <div class="text-base font-bold text-[#111111] dark:text-[#F5F5F2] mb-2">LinkedIn</div>
+        <p class="text-[#6B6B6B] dark:text-[#A3A3A0] mb-4 font-sans text-xs">For professional background, endorsements, and direct messaging.</p>
+        <a
+          href={siteMetadata.social.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1 font-semibold text-[#3157FF] dark:text-[#6B82FF] hover:underline"
+        >
+          <span>View Profile</span>
+          <span>↗</span>
+        </a>
+      </div>
+
+      <!-- GitHub -->
+      <div class="p-6 rounded-xl border border-[#DCDCD8] dark:border-[#30302D] bg-white/70 dark:bg-[#181818]/80 transition-colors">
+        <div class="text-[#8E8E93] dark:text-[#777774] uppercase mb-2">Code &amp; Repositories</div>
+        <div class="text-base font-bold text-[#111111] dark:text-[#F5F5F2] mb-2">GitHub</div>
+        <p class="text-[#6B6B6B] dark:text-[#A3A3A0] mb-4 font-sans text-xs">Explore open source repositories, architecture commits, and experiments.</p>
+        <a
+          href={siteMetadata.social.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1 font-semibold text-[#3157FF] dark:text-[#6B82FF] hover:underline"
+        >
+          <span>@kanishkroy-X</span>
+          <span>↗</span>
+        </a>
+      </div>
+
+      <!-- X -->
+      <div class="p-6 rounded-xl border border-[#DCDCD8] dark:border-[#30302D] bg-white/70 dark:bg-[#181818]/80 transition-colors">
+        <div class="text-[#8E8E93] dark:text-[#777774] uppercase mb-2">Public Thoughts &amp; Notes</div>
+        <div class="text-base font-bold text-[#111111] dark:text-[#F5F5F2] mb-2">X / Twitter</div>
+        <p class="text-[#6B6B6B] dark:text-[#A3A3A0] mb-4 font-sans text-xs">Follow live updates on AI pipelines, product releases, and development notes.</p>
+        <a
+          href={siteMetadata.social.x}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1 font-semibold text-[#3157FF] dark:text-[#6B82FF] hover:underline"
+        >
+          <span>@kanishkroy_</span>
+          <span>↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

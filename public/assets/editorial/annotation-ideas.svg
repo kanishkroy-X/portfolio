@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 220" fill="none">
+  <!-- Editorial Annotation: IDEAS -> SYSTEMS -> REAL THINGS -->
+  <g fill="currentColor" font-family="'JetBrains Mono', 'SF Mono', Consolas, monospace" font-size="16" font-weight="700" letter-spacing="3">
+    <text x="20" y="38">IDEAS</text>
+    <path d="M48 52V76M44 70L48 78L52 70" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <text x="20" y="108">SYSTEMS</text>
+    <path d="M48 122V146M44 140L48 148L52 140" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <text x="20" y="178">REAL THINGS</text>
+  </g>
+  <!-- Underline Accent -->
+  <line x1="18" y1="194" x2="160" y2="194" stroke="#3157FF" stroke-width="2" stroke-linecap="round"/>
+</svg>

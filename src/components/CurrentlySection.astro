@@ -1,0 +1,47 @@
+---
+const currentItems = [
+  {
+    topic: "EDGE REAL-TIME SYSTEMS",
+    state: "Active Testing",
+    description: "Stress-testing low-latency message broadcast and instant peer renegotiation using Cloudflare Durable Objects and WebSocket pooling."
+  },
+  {
+    topic: "AI AD PRODUCTION PIPELINES",
+    state: "Production",
+    description: "Refining 2K storyboard framing constraints and prompt token decoupling to eliminate temporal flicker in high-speed commercial video."
+  },
+  {
+    topic: "VERIFIER GATES & GROUNDING",
+    state: "Research",
+    description: "Constructing automated verification gates that reject ungrounded claims in market intelligence reports before client presentation."
+  }
+];
+---
+
+<section class="py-20 md:py-24 border-b border-[#DCDCD8] dark:border-[#30302D] transition-colors">
+  <div class="max-w-[1320px] mx-auto px-6">
+    <div class="flex items-center justify-between gap-4 mb-8">
+      <div class="text-xs font-mono text-[#3157FF] dark:text-[#6B82FF] tracking-[0.2em] uppercase font-bold">
+        06 // CURRENT FOCUS
+      </div>
+      <div class="flex items-center gap-2 text-xs font-mono text-[#6B6B6B] dark:text-[#A3A3A0]">
+        <span class="w-2 h-2 rounded-full bg-[#10B981] animate-pulse"></span>
+        <span>LAB LOG // AUTUMN 2026</span>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {currentItems.map(item => (
+        <div class="p-6 rounded-xl border border-[#DCDCD8] dark:border-[#30302D] bg-white/70 dark:bg-[#181818]/80 hover:bg-white dark:hover:bg-[#202020] transition-colors">
+          <div class="flex items-center justify-between text-[11px] font-mono mb-3">
+            <span class="text-[#3157FF] dark:text-[#6B82FF] font-semibold">{item.topic}</span>
+            <span class="px-2 py-0.5 rounded bg-[#EFEFEA] dark:bg-[#202020] text-[#6B6B6B] dark:text-[#A3A3A0]">{item.state}</span>
+          </div>
+          <p class="text-sm text-[#111111] dark:text-[#F5F5F2] leading-relaxed">
+            {item.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

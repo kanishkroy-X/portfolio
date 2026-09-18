@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="404 — Page Not Found | Kanishk Roy"
+  description="This page does not exist."
+>
+  <div class="min-h-[60vh] flex items-center justify-center px-6 py-20 transition-colors">
+    <div class="max-w-md text-center">
+      <div class="text-xs font-mono text-[#3157FF] dark:text-[#6B82FF] uppercase tracking-[0.2em] font-bold mb-3">
+        ERROR // 404
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-extrabold text-[#111111] dark:text-[#F5F5F2] mb-4">
+        This page doesn't exist.
+      </h1>
+      <p class="text-sm text-[#6B6B6B] dark:text-[#A3A3A0] mb-8 font-mono">
+        The requested resource is missing or has been relocated.
+      </p>
+      <a
+        href="/"
+        class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#111111] dark:bg-[#F5F5F2] text-white dark:text-[#111111] text-xs font-mono font-medium hover:bg-[#3157FF] dark:hover:bg-[#6B82FF] hover:text-white transition-colors shadow-xs"
+      >
+        <span>BACK TO HOMEPAGE</span>
+        <span>→</span>
+      </a>
+    </div>
+  </div>
+</BaseLayout>

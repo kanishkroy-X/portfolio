@@ -1,0 +1,51 @@
+---
+import { siteMetadata } from '../data/siteMetadata';
+---
+
+<footer class="bg-[#0C0C0D] text-[#8E8E93] border-t border-[#262628] relative overflow-hidden">
+  <!-- Subtle dark contour footer pattern -->
+  <div class="absolute inset-0 bg-[url('/assets/backgrounds/footer-pattern.jpg')] opacity-20 pointer-events-none bg-cover bg-center"></div>
+
+  <div class="max-w-[1320px] mx-auto px-6 py-14 relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center justify-between">
+      <!-- Brand & Tagline -->
+      <div class="md:col-span-5">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="text-white font-bold tracking-tight text-base font-sans">KANISHK ROY</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#3157FF]"></span>
+        </div>
+        <p class="text-xs font-mono text-[#8E8E93]">
+          Digital products &amp; AI-powered systems.
+        </p>
+        <p class="text-[11px] font-mono text-[#55555A] mt-1">
+          Kolkata, India // 22°34'N 88°22'E
+        </p>
+      </div>
+
+      <!-- Social Links -->
+      <div class="md:col-span-4 flex items-center gap-5 text-xs font-mono">
+        <a href={`mailto:${siteMetadata.email}`} class="hover:text-white transition-colors" title="Direct Email">
+          Email
+        </a>
+        <span class="text-[#262628]">•</span>
+        <a href={siteMetadata.social.linkedin} target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" title="LinkedIn">
+          LinkedIn
+        </a>
+        <span class="text-[#262628]">•</span>
+        <a href={siteMetadata.social.github} target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" title="GitHub">
+          GitHub
+        </a>
+        <span class="text-[#262628]">•</span>
+        <a href={siteMetadata.social.x} target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" title="X (Twitter)">
+          X
+        </a>
+      </div>
+
+      <!-- Copyright & Time -->
+      <div class="md:col-span-3 md:text-right text-[11px] font-mono text-[#55555A]">
+        <div>© 2026 Kanishk Roy. All rights reserved.</div>
+        <div class="mt-0.5">IDEAS → SYSTEMS → REAL THINGS</div>
+      </div>
+    </div>
+  </div>
+</footer>

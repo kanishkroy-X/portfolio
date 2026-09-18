@@ -1,0 +1,16 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className = "py-8" } = Astro.props;
+---
+
+<div class={`w-full flex items-center justify-center overflow-hidden px-6 ${className}`}>
+  <img
+    src="/assets/editorial/divider-editorial.svg"
+    alt="Products x AI x Creative Tech Divider"
+    class="w-full max-w-[800px] h-auto opacity-70"
+    loading="lazy"
+  />
+</div>

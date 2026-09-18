@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58 48" fill="none">
+  <!-- KR Monogram Light (#111111) -->
+  <g fill="#111111">
+    <rect x="4" y="8" width="6" height="32" rx="0.5"/>
+    <polygon points="25,8 11,23.5 11,25 25.5,40 17.5,40 7.5,28 7.5,21 17.5,8"/>
+    <rect x="30" y="8" width="6" height="32" rx="0.5"/>
+    <path d="M33 8H45C50.5 8 54 11.5 54 16.5C54 21.5 50.5 25 45 25H36V8ZM36 14V19.5H44.5C47 19.5 48.5 18.2 48.5 16.5C48.5 14.8 47 14 44.5 14H36Z" fill-rule="evenodd"/>
+    <polygon points="42,23 54.5,40 47.5,40 37,25 42,23"/>
+  </g>
+</svg>

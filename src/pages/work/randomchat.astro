@@ -1,0 +1,99 @@
+---
+import CaseStudyLayout from '../../components/CaseStudyLayout.astro';
+import { projects } from '../../data/projects';
+
+const project = projects.find(p => p.id === 'randomchat')!;
+
+const uiScreens = [
+  { file: '/assets/projects/randomchat/screens/01_dark_people_online_filters.png', title: 'People Lobby & Country Filters', desc: 'Browse available online peers with country and gender filters before connecting.' },
+  { file: '/assets/projects/randomchat/screens/02_dark_active_chat.png', title: 'Active Chat Session', desc: 'Minimal distraction-free text conversation interface with instant next stranger skip.' },
+  { file: '/assets/projects/randomchat/screens/04_dark_feature_unlock.png', title: 'Feature Unlock Gate', desc: 'Mutual consent requirement before voice or media permissions are granted.' },
+  { file: '/assets/projects/randomchat/screens/11_dark_settings.png', title: 'Session Settings', desc: 'Temporary guest preferences with zero persistent data collection.' }
+];
+---
+
+<CaseStudyLayout project={project}>
+  <!-- Custom Hero Media -->
+  <div slot="hero-media" class="rounded-xl border border-[#262628] dark:border-[#30302D] bg-[#0E0E10] p-3 sm:p-4 shadow-xl">
+    <div class="px-4 py-2 border-b border-[#262628] flex items-center justify-between text-xs font-mono text-[#8E8E93] mb-3">
+      <div class="flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-[#10B981]"></span>
+        <span class="text-white">RANDOMCAHT.ONLINE // PRODUCTION INTERFACE</span>
+      </div>
+      <span>CLOUDFLARE EDGE</span>
+    </div>
+    <div class="rounded-lg overflow-hidden border border-[#262628]">
+      <img
+        src="/assets/projects/randomchat/randomchat-ui.png"
+        alt="RandomChat Production Interface Preview"
+        class="w-full h-auto object-cover"
+      />
+    </div>
+  </div>
+
+  <!-- Architecture & Flow Slot -->
+  <div slot="diagram" class="space-y-12">
+    <!-- Edge Architecture Visual -->
+    <div>
+      <h2 class="text-xs font-mono uppercase tracking-[0.2em] text-[#3157FF] dark:text-[#6B82FF] font-bold mb-3">
+        EDGE RUNTIME ARCHITECTURE
+      </h2>
+      <div class="rounded-xl overflow-hidden border border-[#DCDCD8] dark:border-[#30302D] bg-[#0E0E10]">
+        <img
+          src="/assets/projects/randomchat/randomchat-architecture.svg"
+          alt="RandomChat Edge Runtime Architecture Diagram"
+          class="w-full h-auto"
+        />
+      </div>
+      <p class="mt-3 text-xs font-mono text-[#6B6B6B] dark:text-[#A3A3A0]">
+        Figure 01: Full-duplex WebSocket connections terminated directly at Cloudflare edge nodes, coordinated by stateful Durable Objects without relational database dependencies.
+      </p>
+    </div>
+
+    <!-- User Matching Progression Flow -->
+    <div>
+      <h2 class="text-xs font-mono uppercase tracking-[0.2em] text-[#3157FF] dark:text-[#6B82FF] font-bold mb-3">
+        MATCHING &amp; CONSENT PROGRESSION FLOW
+      </h2>
+      <div class="rounded-xl overflow-hidden border border-[#DCDCD8] dark:border-[#30302D] bg-[#0E0E10]">
+        <img
+          src="/assets/projects/randomchat/randomchat-matching-flow.svg"
+          alt="RandomChat User Matching Flow Diagram"
+          class="w-full h-auto"
+        />
+      </div>
+      <p class="mt-3 text-xs font-mono text-[#6B6B6B] dark:text-[#A3A3A0]">
+        Figure 02: 5-step user journey from anonymous visitor intake to ephemeral pairing and mutual consent WebRTC voice unlock.
+      </p>
+    </div>
+  </div>
+
+  <!-- Real Implementation UI Screens Evidence -->
+  <div slot="evidence">
+    <h2 class="text-xs font-mono uppercase tracking-[0.2em] text-[#3157FF] dark:text-[#6B82FF] font-bold mb-6">
+      ACTUAL INTERFACE SCREENS &amp; FLOWS
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      {uiScreens.map(screen => (
+        <div class="rounded-xl border border-[#DCDCD8] dark:border-[#30302D] bg-white dark:bg-[#181818] overflow-hidden shadow-xs transition-colors">
+          <div class="bg-[#0E0E10] p-2 aspect-[16/10] overflow-hidden flex items-center justify-center">
+            <img
+              src={screen.file}
+              alt={screen.title}
+              class="w-full h-full object-contain"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-4">
+            <h3 class="font-mono text-xs font-bold text-[#111111] dark:text-[#F5F5F2] uppercase tracking-wider mb-1">
+              {screen.title}
+            </h3>
+            <p class="text-xs text-[#6B6B6B] dark:text-[#A3A3A0] leading-relaxed">
+              {screen.desc}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</CaseStudyLayout>

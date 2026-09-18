@@ -1,0 +1,99 @@
+---
+---
+
+<section class="py-24 md:py-32 bg-[#0C0C0D] text-[#F5F5F7] relative overflow-hidden border-b border-[#262628]">
+  <!-- Subtle dark grain overlay -->
+  <div class="absolute inset-0 bg-[url('/assets/backgrounds/texture-grain-dark.svg')] opacity-60 pointer-events-none"></div>
+
+  <div class="max-w-[1320px] mx-auto px-6 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+      <!-- Left Column: Editorial Quote & Philosophy -->
+      <div class="lg:col-span-5 flex flex-col justify-between">
+        <div>
+          <div class="text-xs font-mono text-[#3157FF] tracking-[0.2em] uppercase font-bold mb-6">
+            05 // ABOUT &amp; PHILOSOPHY
+          </div>
+
+          <!-- Editorial Quote SVG Asset -->
+          <div class="mb-8 p-6 rounded-xl border border-[#262628] bg-[#141416]">
+            <img
+              src="/assets/editorial/quote-same-curiosity.svg"
+              alt="Quote: Same Curiosity. Different Forms. — KR"
+              class="w-full max-w-[340px] h-auto text-white"
+            />
+          </div>
+
+          <p class="text-base text-[#8E8E93] leading-relaxed mb-6">
+            I work across software architecture, artificial intelligence, and creative direction. I don't believe in siloing design from engineering or strategy from execution. The best products emerge when technical rigor and aesthetic taste inform every decision.
+          </p>
+        </div>
+
+        <div class="pt-6 border-t border-[#262628]">
+          <a
+            href="/about"
+            class="inline-flex items-center gap-2 text-sm font-mono text-white hover:text-[#3157FF] transition-colors"
+          >
+            <span>Read Full Biography &amp; Principles</span>
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: System Breakdown & Notebook Annotation -->
+      <div class="lg:col-span-7 space-y-8">
+        <!-- 3 Core Focus Pillars -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="p-5 rounded-lg border border-[#262628] bg-[#161618]">
+            <div class="text-xs font-mono text-[#3157FF] mb-1">01 / DISCIPLINE</div>
+            <div class="text-base font-bold text-white mb-2">Digital Products</div>
+            <p class="text-xs text-[#8E8E93] leading-relaxed">
+              Real-time web applications, Cloudflare edge services, WebSockets, TypeScript, and clean responsive interfaces.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-lg border border-[#262628] bg-[#161618]">
+            <div class="text-xs font-mono text-[#3157FF] mb-1">02 / DISCIPLINE</div>
+            <div class="text-base font-bold text-white mb-2">AI Systems</div>
+            <p class="text-xs text-[#8E8E93] leading-relaxed">
+              Deterministic verifier gates, prompt engineering, Tavily search extraction, and hallucination reduction.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-lg border border-[#262628] bg-[#161618]">
+            <div class="text-xs font-mono text-[#3157FF] mb-1">03 / DISCIPLINE</div>
+            <div class="text-base font-bold text-white mb-2">Creative Direction</div>
+            <p class="text-xs text-[#8E8E93] leading-relaxed">
+              13-stage commercial video production, 2K storyboards, sound design, and frame-accurate timeline editing.
+            </p>
+          </div>
+        </div>
+
+        <!-- Annotation Element & Tool Stack Row -->
+        <div class="grid grid-cols-1 sm:grid-cols-12 gap-6 items-center">
+          <!-- Editorial Notebook Annotation Asset -->
+          <div class="sm:col-span-5 p-5 rounded-xl border border-[#262628] bg-[#141416] flex items-center justify-center">
+            <img
+              src="/assets/editorial/annotation-ideas.svg"
+              alt="Ideas -> Systems -> Real Things Annotation"
+              class="w-full max-w-[200px] h-auto text-white"
+            />
+          </div>
+
+          <!-- Selected Tools & Environment -->
+          <div class="sm:col-span-7 p-6 rounded-xl border border-[#262628] bg-[#161618]">
+            <div class="text-xs font-mono text-[#8E8E93] uppercase tracking-wider mb-4">
+              Selected Technical Stack &amp; Tools
+            </div>
+            <div class="flex flex-wrap gap-2 text-xs font-mono">
+              {['TypeScript', 'Astro', 'Cloudflare Workers', 'Durable Objects', 'Python', 'FastAPI', 'React 19', 'Tailwind', 'WebSockets', 'WebAssembly', 'Midjourney v6', 'Runway Gen-3', 'Premiere Pro', 'Figma'].map(tool => (
+                <span class="px-2.5 py-1 rounded border border-[#2A2A2E] bg-[#1C1C20] text-white/90 text-[11.5px]">
+                  {tool}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
