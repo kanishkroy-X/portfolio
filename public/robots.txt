@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kanishkroy.com/sitemap-index.xml
+Sitemap: https://kanishkroy.com/sitemap.xml

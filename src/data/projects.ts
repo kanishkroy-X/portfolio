@@ -109,7 +109,10 @@ export const projects: Project[] = [
       "/assets/projects/ai-ad-production/pipeline-visual.svg",
       "/assets/projects/ai-ad-production/storyboard-samba.jpeg"
     ],
-    video: "/assets/projects/ai-ad-production/adidas-samba-commercial.mp4",
+    externalLinks: [
+      { label: "Watch Adidas Samba Commercial", url: "https://youtube.com/shorts/4SVc4FL4Mdk" },
+      { label: "Watch Kreo Tech Commercial", url: "https://youtu.be/cPhpFQnsXKo" }
+    ],
     featured: true
   },
   {

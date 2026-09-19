@@ -24,7 +24,7 @@ import { siteMetadata } from '../data/siteMetadata';
 
       <!-- Social Links -->
       <div class="md:col-span-4 flex items-center gap-5 text-xs font-mono">
-        <a href={`mailto:${siteMetadata.email}`} class="hover:text-white transition-colors" title="Direct Email">
+        <a href={siteMetadata.gmailComposeUrl} target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" title="Compose in Gmail">
           Email
         </a>
         <span class="text-[#262628]">•</span>

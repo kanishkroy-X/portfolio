@@ -6,6 +6,7 @@ export interface SiteMetadata {
   url: string;
   location: string;
   email: string;
+  gmailComposeUrl: string;
   social: {
     linkedin: string;
     github: string;
@@ -21,6 +22,7 @@ export const siteMetadata: SiteMetadata = {
   url: "https://kanishkroy.com",
   location: "Kolkata, India",
   email: "kanishkroy2004@gmail.com",
+  gmailComposeUrl: "https://mail.google.com/mail/?view=cm&fs=1&to=kanishkroy2004@gmail.com",
   social: {
     linkedin: "https://www.linkedin.com/in/kanishk-roy-a19b16382/",
     github: "https://github.com/kanishkroy-X",

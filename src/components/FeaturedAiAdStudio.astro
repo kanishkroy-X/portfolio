@@ -88,67 +88,44 @@ const project = projects.find(p => p.id === 'ai-ad-production')!;
         </div>
       </div>
 
-      <!-- Right Column: Dual Commercial Video Player -->
+      <!-- Right Column: Dual Commercial Showcase -->
       <div class="lg:col-span-7">
         <div class="relative rounded-xl border border-[#DCDCD8] dark:border-[#30302D] bg-[#0E0E10] overflow-hidden shadow-xs">
-          <!-- Video Frame Header -->
+          <!-- Frame Header -->
           <div class="px-4 py-2.5 bg-[#141416] border-b border-[#262628] flex items-center justify-between text-xs font-mono text-[#8E8E93]">
             <div class="flex items-center gap-2">
               <span class="w-2.5 h-2.5 rounded-full bg-[#EF4444]"></span>
               <span class="w-2.5 h-2.5 rounded-full bg-[#F59E0B]"></span>
               <span class="w-2.5 h-2.5 rounded-full bg-[#10B981]"></span>
-              <span id="videoTitleLabel" class="ml-2 text-white">ADIDAS_SAMBA_MASTER_1080P.MP4</span>
+              <span id="campaignTitleLabel" class="ml-2 text-white">ADIDAS_SAMBA_COMMERCIAL_1080P</span>
             </div>
-            <span id="videoFormatLabel">9:16 COMMERCIAL REEL</span>
+            <span id="campaignFormatLabel">9:16 COMMERCIAL REEL</span>
           </div>
 
-          <!-- Video Player Container with Custom Controls -->
-          <div class="relative bg-black flex items-center justify-center p-4 sm:p-6 min-h-[380px] sm:min-h-[460px]">
-            <!-- Video Element -->
-            <video
-              id="campaignVideo"
-              class="max-h-[420px] sm:max-h-[500px] w-auto rounded-lg shadow-2xl object-contain transition-all duration-300"
-              poster="/assets/projects/ai-ad-production/adidas-samba-poster.jpg"
-              preload="metadata"
-              playsinline
-            >
-              <source id="videoSource" src="/assets/projects/ai-ad-production/adidas-samba-commercial.mp4" type="video/mp4" />
-              Your browser does not support HTML5 video.
-            </video>
-
-            <!-- Video Overlay Play Button -->
-            <button
-              type="button"
-              id="videoPlayOverlayBtn"
-              class="absolute inset-0 m-auto w-16 h-16 rounded-full bg-black/75 hover:bg-[#3157FF] dark:hover:bg-[#6B82FF] text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition-all duration-300 group cursor-pointer z-10"
-              aria-label="Play commercial video"
-            >
-              <svg class="w-7 h-7 translate-x-0.5" viewBox="0 0 24 24" fill="currentColor">
-                <polygon points="5 3 19 12 5 21 5 3"/>
-              </svg>
-            </button>
+          <!-- Campaign Player Stage -->
+          <div class="relative bg-black flex items-center justify-center p-4 sm:p-6 min-h-[440px] sm:min-h-[520px]">
+            <!-- Responsive Wrapper for YouTube Embed -->
+            <div id="playerWrapper" class="w-[270px] sm:w-[310px] aspect-[9/16] rounded-lg overflow-hidden shadow-2xl bg-black transition-all duration-300">
+              <iframe
+                id="campaignIframe"
+                src="https://www.youtube.com/embed/4SVc4FL4Mdk"
+                title="AI Ad Production — Adidas Samba Commercial"
+                class="w-full h-full border-0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
           </div>
 
-          <!-- Video Player Custom Action Bar -->
-          <div class="px-4 py-3 bg-[#141416] border-t border-[#262628] flex items-center justify-between text-xs font-mono text-white/80">
-            <div class="flex items-center gap-4">
-              <button
-                type="button"
-                id="playToggleBtn"
-                class="hover:text-[#3157FF] dark:hover:text-[#6B82FF] cursor-pointer transition-colors"
-              >
-                [ Play / Pause ]
-              </button>
-              <button
-                type="button"
-                id="muteToggleBtn"
-                class="hover:text-[#3157FF] dark:hover:text-[#6B82FF] cursor-pointer transition-colors"
-              >
-                [ Mute / Unmute ]
-              </button>
+          <!-- Video Frame Action Bar -->
+          <div class="px-4 py-3 bg-[#141416] border-t border-[#262628] flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-white/80">
+            <div class="flex items-center gap-3">
+              <span class="text-[#8E8E93]">Direct In-Page Player</span>
+              <span class="text-[#262628]">•</span>
+              <span class="text-[#10B981]">1080p Masters</span>
             </div>
             <div class="flex items-center gap-3">
-              <span id="fpsLabel" class="text-[#8E8E93]">60fps Master</span>
               <a
                 href="/assets/projects/ai-ad-production/storyboard-samba.jpeg"
                 target="_blank"
@@ -165,48 +142,44 @@ const project = projects.find(p => p.id === 'ai-ad-production')!;
 </section>
 
 <script>
-  // Commercial Switcher & Video Player Controls
-  const video = document.getElementById('campaignVideo') as HTMLVideoElement | null;
-  const videoSource = document.getElementById('videoSource') as HTMLSourceElement | null;
-  const playOverlay = document.getElementById('videoPlayOverlayBtn');
-  const playToggle = document.getElementById('playToggleBtn');
-  const muteToggle = document.getElementById('muteToggleBtn');
-  const titleLabel = document.getElementById('videoTitleLabel');
-  const formatLabel = document.getElementById('videoFormatLabel');
+  // Commercial Switcher Controls for YouTube Embeds
+  const playerWrapper = document.getElementById('playerWrapper');
+  const iframe = document.getElementById('campaignIframe') as HTMLIFrameElement | null;
+  const titleLabel = document.getElementById('campaignTitleLabel');
+  const formatLabel = document.getElementById('campaignFormatLabel');
   const tabAdidas = document.getElementById('tabAdidasBtn');
   const tabKreo = document.getElementById('tabKreoBtn');
 
   const campaigns = {
     adidas: {
-      title: 'ADIDAS_SAMBA_MASTER_1080P.MP4',
+      title: 'ADIDAS_SAMBA_COMMERCIAL_1080P',
       format: '9:16 COMMERCIAL REEL',
-      src: '/assets/projects/ai-ad-production/adidas-samba-commercial.mp4',
-      poster: '/assets/projects/ai-ad-production/adidas-samba-poster.jpg'
+      src: 'https://www.youtube.com/embed/4SVc4FL4Mdk',
+      iframeTitle: 'AI Ad Production — Adidas Samba Commercial',
+      wrapperClasses: 'w-[270px] sm:w-[310px] aspect-[9/16] rounded-lg overflow-hidden shadow-2xl bg-black transition-all duration-300'
     },
     kreo: {
-      title: 'KREO_TECH_NARRATIVE_16x9.MP4',
+      title: 'KREO_TECH_COMMERCIAL_16X9',
       format: '16:9 WIDESCREEN FILM',
-      src: '/assets/projects/ai-ad-production/kreo-tech-commercial.mp4',
-      poster: '/assets/projects/ai-ad-production/kreo-tech-poster.jpg'
+      src: 'https://www.youtube.com/embed/cPhpFQnsXKo',
+      iframeTitle: 'AI Ad Production — Kreo Tech Commercial',
+      wrapperClasses: 'w-full max-w-[620px] aspect-video rounded-lg overflow-hidden shadow-2xl bg-black transition-all duration-300'
     }
   };
 
-  let activeCampaign = 'adidas';
+  let activeCampaign: 'adidas' | 'kreo' = 'adidas';
 
   const switchCampaign = (key: 'adidas' | 'kreo') => {
-    if (activeCampaign === key || !video || !videoSource) return;
+    if (activeCampaign === key || !iframe || !playerWrapper) return;
     activeCampaign = key;
-    video.pause();
 
     const data = campaigns[key];
-    videoSource.src = data.src;
-    video.poster = data.poster;
-    video.load();
+    iframe.src = data.src;
+    iframe.title = data.iframeTitle;
+    playerWrapper.className = data.wrapperClasses;
 
     if (titleLabel) titleLabel.textContent = data.title;
     if (formatLabel) formatLabel.textContent = data.format;
-    if (playOverlay) playOverlay.style.display = 'flex';
-    if (playToggle) playToggle.textContent = '[ Play / Pause ]';
 
     const activeClasses = ['bg-[#111111]', 'dark:bg-[#F5F5F2]', 'text-white', 'dark:text-[#111111]'];
     const inactiveClasses = ['bg-white', 'dark:bg-[#181818]', 'border', 'border-[#DCDCD8]', 'dark:border-[#30302D]', 'text-[#6B6B6B]', 'dark:text-[#A3A3A0]'];
@@ -226,33 +199,4 @@ const project = projects.find(p => p.id === 'ai-ad-production')!;
 
   if (tabAdidas) tabAdidas.addEventListener('click', () => switchCampaign('adidas'));
   if (tabKreo) tabKreo.addEventListener('click', () => switchCampaign('kreo'));
-
-  if (video) {
-    const togglePlay = () => {
-      if (video.paused) {
-        video.play();
-        if (playOverlay) playOverlay.style.display = 'none';
-        if (playToggle) playToggle.textContent = '[ Pause ]';
-      } else {
-        video.pause();
-        if (playOverlay) playOverlay.style.display = 'flex';
-        if (playToggle) playToggle.textContent = '[ Play ]';
-      }
-    };
-
-    if (playOverlay) playOverlay.addEventListener('click', togglePlay);
-    if (playToggle) playToggle.addEventListener('click', togglePlay);
-
-    if (muteToggle) {
-      muteToggle.addEventListener('click', () => {
-        video.muted = !video.muted;
-        muteToggle.textContent = video.muted ? '[ Unmute ]' : '[ Mute ]';
-      });
-    }
-
-    video.addEventListener('ended', () => {
-      if (playOverlay) playOverlay.style.display = 'flex';
-      if (playToggle) playToggle.textContent = '[ Replay ]';
-    });
-  }
 </script>
