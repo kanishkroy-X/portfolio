@@ -116,8 +116,91 @@ export const projects: Project[] = [
     featured: true
   },
   {
-    id: "ai-research-analyst",
+    id: "mens-jewellery",
     number: "03",
+    title: "Men's Jewellery Luxury Commercial",
+    slug: "mens-jewellery",
+    year: "2026",
+    category: "CREATIVE DIRECTION / AI PRODUCTION",
+    shortDescription: "High-end luxury commercial reel showcasing photorealistic macro metal physics, chain link reflections, and dark studio cinematography.",
+    description: "A finished cinematic commercial reel for luxury men's jewellery. Engineered prompt token anchors specifically targeting macro light bounces, specular highlights on polished gold and steel, and physically realistic weight in chain movements without generative plastic deformation.",
+    role: "Creative Director, Prompt Architect & Post-Production Editor",
+    technologies: ["Midjourney v6", "Kling AI", "Runway Gen-3", "Adobe Premiere Pro", "Foley Mix", "Macro Lighting"],
+    problem: "Reflective metallic surfaces, intricate chain links, and luxury lighting are among the most difficult generative AI failure points, typically resulting in plastic texture deformation, temporal melting, and unnatural motion.",
+    approach: "Formulated a luxury-grade prompt architecture locking specular highlight reflection passes, micro-facet chain physics, and dark studio rim-lighting. Produced comprehensive 5-angle character and wardrobe consistency sheets before running selective multi-seed synthesis.",
+    decisions: [
+      "Macro metal reflection anchoring: Isolated specular glare tokens from geometry tokens to prevent link warping.",
+      "Character sheet consistency: Generated 5 multi-angle character references to maintain identical model facial structure and styling across setups.",
+      "Dark studio contrast grading: Utilized high-contrast low-key cinematography with rim highlights to accentuate polished metals.",
+      "Tactile sound design: Combined crisp metallic clinks, deep sub-bass cinematic booms, and rhythmic pacing."
+    ],
+    process: [
+      "Brand Aesthetic & Luxury Jewelry Visual Codes",
+      "5-Angle Character & Wardrobe Consistency Sheets",
+      "Macro Specular Highlight Prompt Engineering",
+      "Multi-Take Kling AI & Runway Synthesis",
+      "Artifact Curation Gate (< 5% retention)",
+      "Premiere Pro Assembly & Foley Mix"
+    ],
+    outcome: "A complete luxury commercial reel demonstrating photorealistic metallic reflections, tactile jewelry weight, and consistent character casting.",
+    learnings: [
+      "Specular highlights on curved metal surfaces require explicit negative prompt weighting against matte plastic diffusion.",
+      "High-resolution multi-angle character sheets eliminate facial drift across distinct camera setups."
+    ],
+    heroMedia: "/assets/projects/mens-jewellery/hero-poster.webp",
+    supportingMedia: [
+      "/assets/projects/mens-jewellery/character-1.webp",
+      "/assets/projects/mens-jewellery/character-2.webp",
+      "/assets/projects/mens-jewellery/character-3.webp",
+      "/assets/projects/mens-jewellery/character-4.webp",
+      "/assets/projects/mens-jewellery/character-5.webp",
+      "/assets/projects/mens-jewellery/prop-macro.webp"
+    ],
+    featured: false
+  },
+  {
+    id: "ai-ugc-reel",
+    number: "04",
+    title: "AI UGC Commercial Sequence",
+    slug: "ai-ugc-reel",
+    year: "2026",
+    category: "CREATIVE DIRECTION / AI PRODUCTION",
+    shortDescription: "Naturalistic creator-style UGC ad sequence simulating handheld smartphone camera physics and authentic human product interactions.",
+    description: "A social-native creator UGC sequence combining synthetic human talent with realistic smartphone camera micro-jitter, authentic conversational pacing, and convincing domestic ambient lighting for high-conversion paid social advertising.",
+    role: "Creative Director, Prompt Engineer & Post-Production Editor",
+    technologies: ["Kling AI", "Midjourney v6", "Seedance", "Adobe Premiere Pro", "CapCut", "Foley Mix"],
+    problem: "D2C brands spend significant budgets on creator gifting, influencer coordination, and reshoots for paid social ad variations. Generative AI alternatives often look overtly synthetic, with mechanical camera moves, sterile lighting, and uncanny facial expressions.",
+    approach: "Synthesized naturalistic creator footage by introducing simulated smartphone camera imperfections (micro-handheld jitter, natural focal breathing, room ambience) and rigorous 4-view character reference modeling.",
+    decisions: [
+      "Handheld camera physics: Engineered prompt tokens to introduce natural organic camera drift rather than smooth robotic dollies.",
+      "4-view character consistency: Created dedicated character reference sheets to ensure consistent hair, skin texture, and wardrobe across shots.",
+      "9:16 mobile-first framing: Built directly for TikTok and Instagram Reels with rapid 3-second hook mechanics.",
+      "Authentic environmental audio: Layered domestic room tone and tactile Foley to reinforce perceived realism."
+    ],
+    process: [
+      "Social Ad Hook Strategy & Scripting",
+      "4-View Character Modeling & Wardrobe Sheets",
+      "Smartphone Camera Physics Prompt Formulation",
+      "Multi-Take Syntheses & Artifact Gate",
+      "Mobile Cut Assembly & Audio Sweetening"
+    ],
+    outcome: "A high-retention 9:16 social-first UGC ad sequence proving cost-effective synthetic creator content without uncanny valley defects.",
+    learnings: [
+      "Subtle camera shake and realistic domestic room lighting do more to mask synthetic origin than raw resolution alone."
+    ],
+    heroMedia: "/assets/projects/ai-ugc-reel/hero-poster.webp",
+    supportingMedia: [
+      "/assets/projects/ai-ugc-reel/character-1.webp",
+      "/assets/projects/ai-ugc-reel/character-2.webp",
+      "/assets/projects/ai-ugc-reel/character-3.webp",
+      "/assets/projects/ai-ugc-reel/character-4.webp",
+      "/assets/projects/ai-ugc-reel/reference-card.webp"
+    ],
+    featured: false
+  },
+  {
+    id: "ai-research-analyst",
+    number: "05",
     title: "AI Research Analyst",
     slug: "ai-research-analyst",
     year: "2026",
@@ -155,7 +238,7 @@ export const projects: Project[] = [
   },
   {
     id: "wellbeing-nutrition",
-    number: "04",
+    number: "06",
     title: "Wellbeing Nutrition",
     slug: "wellbeing-nutrition",
     year: "2025",
@@ -190,7 +273,7 @@ export const projects: Project[] = [
   },
   {
     id: "cleanpdf",
-    number: "05",
+    number: "07",
     title: "CleanPDF",
     slug: "cleanpdf",
     year: "2025",
