@@ -17,7 +17,6 @@
 |---|---|---|---|---|:---:|:---:|:---:|:---:|
 | **RandomChat** | COMPLETED | PORTFOLIO READY | Web / Distributed Systems | FLAGSHIP | YES | NO | READY | YES |
 | **AI Ad Production Studio** | COMPLETED | PORTFOLIO READY | Creative AI / Commercials | FLAGSHIP | YES | YES | READY | YES |
-| **Student Project OS** | ONGOING | ONGOING — POTENTIAL | Product / Web Application | ONGOING | YES | YES | PARTIAL | NO |
 | **Wellbeing Nutrition CRO** | COMPLETED | PORTFOLIO READY | Growth / Product / CRO | SUPPORTING | YES | NO | READY | YES |
 | **AI Research Analyst** | COMPLETED | PORTFOLIO READY | AI Systems / Full-Stack | SUPPORTING | YES | NO | READY | PARTIAL |
 | **WhatsApp Lead Qualifier** | COMPLETED | PORTFOLIO READY | Automation / AI Agents | SUPPORTING | YES | NO | READY | PARTIAL |
@@ -144,23 +143,12 @@
 ---
 
 ### Ongoing Work
-*Projects currently in active development — suitable for an "In Progress / Lab" preview.*
-
-#### 11. Student Project OS
-- **Canonical ID:** `student-project-os`
-- **Category:** Product Architecture / Web Application
-- **Workspace Location:** `E:\01_WORK\Websites\student OS`
-- **Role:** **ONGOING (Hero "Currently Building" Candidate)**
-- **Current State:** Comprehensive 1,935-line PRD (`student_project_os.md`), 24KB `DESIGN.md`, 4.2MB MP4 video concept preview, Astro codebase prototype.
-- **What Remains:** Database wiring, authentication, and final desktop drag-and-drop workspace polish.
-- **Case Study Status:** PARTIAL (Product strategy, specs, and video preview ready).
-
----
+*No current portfolio project is designated for the ongoing-work showcase.*
 
 ### Experiments & R&D
 *Explorations, scripts, and internal prompt tools.*
 
-#### 12. OpenMontage
+#### 11. OpenMontage
 - **Canonical ID:** `openmontage`
 - **Category:** AI Video Automation / Programmatic Engine
 - **Workspace Location:** `E:\01_WORK\Automation\Open Montage\OpenMontage`
@@ -168,7 +156,7 @@
 - **Evidence:** Python orchestrator, Remotion Composer integration, Ink Theater, YAML pipelines, 48KB `AGENT_GUIDE.md`, 44KB `README.md`.
 - **Placement:** Studio Lab Log / Experimental section.
 
-#### 13. Gemini Calculator (Mobile App)
+#### 12. Gemini Calculator (Mobile App)
 - **Canonical ID:** `gemini-calculator`
 - **Category:** Mobile Development / React Native & Expo
 - **Workspace Location:** `E:\01_WORK\AI\vs_code_workspace\gemini-calculator`
@@ -176,7 +164,7 @@
 - **Evidence:** Expo SDK 56, React Native 0.85, TypeScript, Orbitron & Space Mono typography, AsyncStorage history state.
 - **Placement:** Lab Log / Mobile experiment.
 
-#### 14. Football UGC Brand Campaign Studio
+#### 13. Football UGC Brand Campaign Studio
 - **Canonical ID:** `football-ugc-studio`
 - **Category:** Creative AI / Prompt Engineering
 - **Workspace Location:** `E:\01_WORK\AI\Codex_Studio\ai-ugc-brand-campaign-studio`
@@ -189,7 +177,7 @@
 ### Incomplete Work
 *Backlog items lacking final deliverables.*
 
-#### 15. Headphones Commercial Reel
+#### 14. Headphones Commercial Reel
 - **Canonical ID:** `headphones-commercial`
 - **Category:** Video / Creative AI
 - **Workspace Location:** `E:\02_CONTENT\Ads\Omni_Campaigns\PORTFOLIO\headphones`
@@ -220,14 +208,13 @@
 2. **AI Ad Production Studio (5-Commercial Creative Suite)** — Flagship Pillar 02 (Creative Direction, AI Video Production, Multi-Brand Campaigns).
 
 ### Supporting Candidates (Breadth, Depth & Operational Competence)
-1. **Student Project OS** — Primary candidate for the "Currently Building / In the Lab" preview.
-2. **Wellbeing Nutrition CRO** — Proves commercial growth strategy, CRO, and product management rigor.
-3. **AI Research Analyst** — Proves full-stack AI engineering, FastAPI, React 19, and rigorous testing.
-4. **WhatsApp Real Estate Lead Qualifier** — Demonstrates practical AI agent automation, n8n workflows, CRM integration, and prompt engineering.
-5. **Instagram MCP Server** — Highlights cutting-edge LLM protocol engineering (Model Context Protocol SDK).
-6. **Aurelia Real Estate Brokerage Website** — Demonstrates refined, luxury editorial web design in Astro 6 + Tailwind v4.
-7. **FreeRuler** — Clean, client-side interactive browser utility.
-8. **CleanPDF** — In-browser document privacy tool leveraging WebAssembly.
+1. **Wellbeing Nutrition CRO** — Proves commercial growth strategy, CRO, and product management rigor.
+2. **AI Research Analyst** — Proves full-stack AI engineering, FastAPI, React 19, and rigorous testing.
+3. **WhatsApp Real Estate Lead Qualifier** — Demonstrates practical AI agent automation, n8n workflows, CRM integration, and prompt engineering.
+4. **Instagram MCP Server** — Highlights cutting-edge LLM protocol engineering (Model Context Protocol SDK).
+5. **Aurelia Real Estate Brokerage Website** — Demonstrates refined, luxury editorial web design in Astro 6 + Tailwind v4.
+6. **FreeRuler** — Clean, client-side interactive browser utility.
+7. **CleanPDF** — In-browser document privacy tool leveraging WebAssembly.
 
 ### Experimental Candidates (Lab Log / Experiments)
 1. **OpenMontage** — Programmatic video rendering pipeline (Python + Remotion).
