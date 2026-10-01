@@ -31,7 +31,7 @@ Midjourney, Kling AI, Runway Gen-3, Adobe Premiere Pro, Sound Design
 - Rhythmic, high-end editorial pacing with tailored audio mix
 
 ## Evidence
-- YouTube Video Master: `https://youtu.be/h6nyN1gyFvI?si=_eOURpB6pQwaYQtS` (Title: "mens jwellery")
+- YouTube Video Master: `https://youtu.be/h6nyN1gyFvI?si=dJKXgoiJV2tEi55V` (Title: "mens jwellery")
 - Local master video files in `e:\02_CONTENT\Ads\Omni_Campaigns\PORTFOLIO\Mens Jwellery`:
   - `2026-09-29 09-14-55.mp4` (146 MB)
   - `2026-09-29 09-14-55_1.mp4` (146 MB)
@@ -40,7 +40,7 @@ Midjourney, Kling AI, Runway Gen-3, Adobe Premiere Pro, Sound Design
 - Prop and lighting references
 
 ## Public Links
-- YouTube Video: https://youtu.be/h6nyN1gyFvI?si=_eOURpB6pQwaYQtS
+- YouTube Video: https://youtu.be/h6nyN1gyFvI?si=dJKXgoiJV2tEi55V
 
 ## Portfolio Notes
 Acts as a verified flagship extension to the AI Ad Production Studio, proving capability in luxury e-commerce and difficult material physics.

@@ -156,6 +156,10 @@ export const projects: Project[] = [
       "/assets/projects/mens-jewellery/character-5.webp",
       "/assets/projects/mens-jewellery/prop-macro.webp"
     ],
+    video: "https://youtu.be/h6nyN1gyFvI?si=dJKXgoiJV2tEi55V",
+    externalLinks: [
+      { label: "Watch Commercial Master", url: "https://youtu.be/h6nyN1gyFvI?si=dJKXgoiJV2tEi55V" }
+    ],
     featured: false
   },
   {
@@ -195,6 +199,10 @@ export const projects: Project[] = [
       "/assets/projects/ai-ugc-reel/character-3.webp",
       "/assets/projects/ai-ugc-reel/character-4.webp",
       "/assets/projects/ai-ugc-reel/reference-card.webp"
+    ],
+    video: "https://youtu.be/4OgE5mzghfI?si=DGmLsP9vXYCml0lp",
+    externalLinks: [
+      { label: "Watch Commercial Sequence", url: "https://youtu.be/4OgE5mzghfI?si=DGmLsP9vXYCml0lp" }
     ],
     featured: false
   },

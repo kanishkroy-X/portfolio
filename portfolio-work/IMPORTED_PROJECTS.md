@@ -17,7 +17,8 @@ This document records the exact projects imported into the portfolio website str
 - **Role:** Creative Director, Prompt Architect & Post-Production Editor
 - **Key Evidence:** 5 Character consistency sheets (`character 1.png` - `charater 5.png`), prop and lighting references (`ca36bb93-c413-4be0-86c3-972d51771b1a.png`), local master files.
 - **Web Media:** `public/assets/projects/mens-jewellery/` (optimized WebP/JPG posters and character sheets, total < 1MB).
-- **Video Embed Status:** **OFF** (no video embeds or players active on website per user instruction until new confirmed URLs are provided).
+- **Video Embed Status:** **ACTIVE (Click-to-Play Facade)**
+  - YouTube URL: `https://youtu.be/h6nyN1gyFvI?si=dJKXgoiJV2tEi55V`
 - **Git Binary Safety:** Zero `.mp4` or `.mov` files added or committed.
 
 ### 2. AI UGC Commercial Sequence (`ai-ugc-reel`)
@@ -26,7 +27,8 @@ This document records the exact projects imported into the portfolio website str
 - **Role:** Creative Director, Prompt Engineer & Post-Production Editor
 - **Key Evidence:** 4 Character consistency sheets (`chatacter seet/`), reference cards (`Ref/IMAGE 3 CARD.png`), local video sequence.
 - **Web Media:** `public/assets/projects/ai-ugc-reel/` (optimized WebP/JPG posters and character sheets, total < 800KB).
-- **Video Embed Status:** **OFF** (no video embeds or players active on website per user instruction until new confirmed URLs are provided).
+- **Video Embed Status:** **ACTIVE (Click-to-Play Facade)**
+  - YouTube URL: `https://youtu.be/4OgE5mzghfI?si=DGmLsP9vXYCml0lp`
 - **Git Binary Safety:** Zero `.mp4` or `.mov` files added or committed.
 
 ---

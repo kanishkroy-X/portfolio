@@ -31,12 +31,12 @@ Kling AI, Seedance, Midjourney, Adobe Premiere Pro, CapCut, Foley Mix
 - Hook-focused pacing optimized for initial 3-second retention
 
 ## Evidence
-- YouTube Video Master: `https://youtu.be/NaEyB2RAtQQ?si=Au6FXsmhcpYNQDNk` (Title: "AI UGC")
+- YouTube Video Master: `https://youtu.be/4OgE5mzghfI?si=DGmLsP9vXYCml0lp` (Title: "AI UGC")
 - Local video master in `e:\02_CONTENT\Ads\Omni_Campaigns\PORTFOLIO\ai reel 2\video\AI UGC.mp4` (64 MB)
 - Character reference sheets in `e:\02_CONTENT\Ads\Omni_Campaigns\PORTFOLIO\ai reel 2\chatacter seet`
 
 ## Public Links
-- YouTube Video: https://youtu.be/NaEyB2RAtQQ?si=Au6FXsmhcpYNQDNk
+- YouTube Video: https://youtu.be/4OgE5mzghfI?si=DGmLsP9vXYCml0lp
 
 ## Portfolio Notes
 Provides evidence of hyper-realistic, cost-effective creator video generation for direct-to-consumer performance marketing.
