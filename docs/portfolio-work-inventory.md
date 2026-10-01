@@ -15,14 +15,13 @@
 | **03. Men's Jewellery Commercial** | Creative Direction / AI Video | `COMPLETED` | **PORTFOLIO READY** | `NEARLY READY` | **FLAGSHIP EXTENSION** |
 | **04. AI UGC for Cars** | Creative Direction / AI Video | `COMPLETED` | **PORTFOLIO READY** | `NEARLY READY` | **FLAGSHIP EXTENSION** |
 | **05. AI UGC Commercial Sequence** | Creative Direction / AI Video | `COMPLETED` | **PORTFOLIO READY** | `NEARLY READY` | **FLAGSHIP EXTENSION** |
-| **06. Student Project OS** | Product / SaaS / Productivity | `ONGOING` | **NEEDS POLISH** | `NEARLY READY` | **"CURRENTLY BUILDING" SHOWCASE** |
-| **07. FreeRuler (`freeruler.com`)** | Web Utility / Frontend Engineering | `COMPLETED` | **NEEDS POLISH** | `NEEDS MATERIAL` | **SUPPORTING UTILITY** |
-| **08. AI Research Analyst (Market Intel)** | AI Systems / Market Intelligence | `COMPLETED` | **PORTFOLIO READY** | `READY` | **SUPPORTING SYSTEM** |
-| **09. Wellbeing Nutrition CRO** | CRO Research & Product Strategy | `COMPLETED` | **PORTFOLIO READY** | `READY` | **SUPPORTING SYSTEM** |
-| **10. CleanPDF** | Client-Side Utility / WASM | `COMPLETED` | **NEEDS POLISH** | `NEEDS MATERIAL` | **SUPPORTING UTILITY** |
-| **11. OpenMontage** | AI Video Automation / Engineering | `EXPERIMENT` | **NOT PORTFOLIO READY** | `NEEDS MATERIAL` | **LAB LOG / R&D DEEP-DIVE** |
-| **12. Football UGC Campaign Studio** | Creative AI / Reverse Engineering | `EXPERIMENT` | **NOT PORTFOLIO READY** | `NOT SUITABLE` | **LAB LOG / INTERNAL ASSET** |
-| **13. Headphones Commercial** | Creative AI Video | `INCOMPLETE` | **NOT PORTFOLIO READY** | `NOT SUITABLE` | **RAW ASSET VAULT** |
+| **06. FreeRuler (`freeruler.com`)** | Web Utility / Frontend Engineering | `COMPLETED` | **NEEDS POLISH** | `NEEDS MATERIAL` | **SUPPORTING UTILITY** |
+| **07. AI Research Analyst (Market Intel)** | AI Systems / Market Intelligence | `COMPLETED` | **PORTFOLIO READY** | `READY` | **SUPPORTING SYSTEM** |
+| **08. Wellbeing Nutrition CRO** | CRO Research & Product Strategy | `COMPLETED` | **PORTFOLIO READY** | `READY` | **SUPPORTING SYSTEM** |
+| **09. CleanPDF** | Client-Side Utility / WASM | `COMPLETED` | **NEEDS POLISH** | `NEEDS MATERIAL` | **SUPPORTING UTILITY** |
+| **10. OpenMontage** | AI Video Automation / Engineering | `EXPERIMENT` | **NOT PORTFOLIO READY** | `NEEDS MATERIAL` | **LAB LOG / R&D DEEP-DIVE** |
+| **11. Football UGC Campaign Studio** | Creative AI / Reverse Engineering | `EXPERIMENT` | **NOT PORTFOLIO READY** | `NOT SUITABLE` | **LAB LOG / INTERNAL ASSET** |
+| **12. Headphones Commercial** | Creative AI Video | `INCOMPLETE` | **NOT PORTFOLIO READY** | `NOT SUITABLE` | **RAW ASSET VAULT** |
 
 ---
 
@@ -144,30 +143,6 @@
 - **Relevant Technologies / Tools:** Kling AI, Seedance, Midjourney, Premiere Pro, CapCut, Foley Mix.
 - **Potential Portfolio Role:** **FLAGSHIP EXTENSION** (Demonstrates authentic, low-friction social creator video generation).
 - **Notes:** Proves ability to replace expensive creator gifting and studio shoots with hyper-realistic AI UGC.
-
----
-
-### Project 06: Student Project OS
-- **Status:** `ONGOING / IN DEVELOPMENT`
-- **Category:** `Product / SaaS / Productivity`
-- **Short Description:** A dedicated project and portfolio workspace built for ambitious students who juggle learning AI, building software, creating content, and applying for opportunities. Anchored by the question: *"Out of everything I want to do, what should I work on today?"*
-- **What Exists:**
-  - Exhaustive 1,935-line Product Requirements Document (`e:\01_WORK\Websites\student OS\student_project_os.md`).
-  - Comprehensive 24KB UI/UX Design System Specification (`e:\01_WORK\Websites\student OS\DESIGN.md`).
-  - Complete Design Intelligence Kit (`uiux-design-intelligence-kit.md`).
-  - Video concept asset (`Woman_selecting_task_on_laptop_202609012134.mp4` at 4.2 MB).
-  - Working Astro codebase initialized with components and layouts.
-- **What is Missing:**
-  - Live hosted deployment domain.
-  - Finalized production screenshots of the interactive dashboard.
-- **Portfolio Readiness:** **NEEDS POLISH** (Perfect for a "Currently Building" showcase, but not ready as a completed case study).
-- **Case Study Readiness:** **NEARLY READY** (The documentation is world-class; only final UI screenshots and live link are needed).
-- **Available Assets:** 1,935-line PRD, 24KB DESIGN.md, MP4 video concept, prompt packages.
-- **Video Links:** Local video asset only (`Woman_selecting_task_on_laptop_202609012134.mp4`).
-- **Documentation:** Exceptional (`e:\01_WORK\Websites\student OS`).
-- **Relevant Technologies / Tools:** Astro, TypeScript, Tailwind CSS, Product Management, Information Architecture, Ergonomic UI Design.
-- **Potential Portfolio Role:** **HIGH-VALUE ONGOING PRODUCT SHOWCASE** (Hero item in the "Currently Building / Lab Log" section).
-- **Notes:** Massive evidence of authentic product thinking and self-directed SaaS architecture.
 
 ---
 
@@ -360,7 +335,6 @@ Every discovered video link and its designated portfolio presentation target:
 | `e:\01_WORK\Clients\growth_pm\images\` | Funnel PNGs | **Case-study asset** | Integrate into Wellbeing Nutrition case study |
 | `e:\02_CONTENT\Ads\Omni_Campaigns\PORTFOLIO\Mens Jwellery\*.png` | Character sheets | **Case-study asset** | Use in Men's Jewellery behind-the-scenes gallery |
 | `e:\02_CONTENT\Ads\Omni_Campaigns\PORTFOLIO\headphones\Videos\*.mp4` | Raw takes (50MB+) | **Reference only / Working vault** | Keep outside repository |
-| `e:\01_WORK\Websites\student OS\student_project_os.md` | 33KB Markdown | **Case-study asset** | Use to author Student OS "Currently Building" card |
 
 ---
 
@@ -371,7 +345,6 @@ Every discovered video link and its designated portfolio presentation target:
 | **Men's Jewellery Video** | Not represented | **Integrate immediately** as Tab 03 in the AI Ad Production Studio showcase. |
 | **AI UGC for Cars Video** | Not represented | **Integrate immediately** as Tab 04 in the AI Ad Production Studio showcase. |
 | **AI UGC Sequence Video** | Not represented | **Integrate** as supporting creator evidence. |
-| **Student Project OS** | Not represented | **Feature prominently** in the "Currently Building / Lab Log" section as live proof of active SaaS product thinking. |
 | **FreeRuler (`freeruler.com`)** | Not represented | **Add to Selected Archive** as an interactive web utility alongside or replacing CleanPDF. |
 | **OpenMontage** | Not represented | **Reference in Lab Log** as advanced Python/Remotion video automation research. |
 | **RandomChat** | Represented as Pillar 01 | **Upgrade card** to expose direct link to `randomcaht.online` on the homepage. |
@@ -386,6 +359,5 @@ Every discovered video link and its designated portfolio presentation target:
 These questions cannot be answered from the filesystem and require your decision:
 
 1. **FreeRuler Production Status:** What is the active public domain for FreeRuler (`freeruler.com` or `newruler.in`), and do you want it featured as a live interactive utility on the portfolio?
-2. **Student Project OS Visibility:** Do you want Student Project OS featured on the homepage as a "Currently Building" preview, or should it wait until a public beta link is deployed?
-3. **Commercial Video Selection:** In the AI Ad Production Studio showcase, should we feature all 4 commercial videos (Adidas Samba, Kreo Tech, Men's Jewellery, AI UGC Cars) in the interactive tab switcher?
-4. **OpenMontage Exposure:** Do you want OpenMontage mentioned in your "Lab Log" as evidence of deep Python video pipeline engineering?
+2. **Commercial Video Selection:** In the AI Ad Production Studio showcase, should we feature all 4 commercial videos (Adidas Samba, Kreo Tech, Men's Jewellery, AI UGC Cars) in the interactive tab switcher?
+3. **OpenMontage Exposure:** Do you want OpenMontage mentioned in your "Lab Log" as evidence of deep Python video pipeline engineering?
