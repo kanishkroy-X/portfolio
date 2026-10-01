@@ -11,6 +11,7 @@ export interface SiteMetadata {
     linkedin: string;
     github: string;
     x: string;
+    youtube: string;
   };
 }
 
@@ -27,5 +28,7 @@ export const siteMetadata: SiteMetadata = {
     linkedin: "https://www.linkedin.com/in/kanishk-roy-a19b16382/",
     github: "https://github.com/kanishkroy-X",
     x: "https://x.com/kanishkroy_",
+    youtube: "https://www.youtube.com/@Yokigaming_",
   }
 };
+

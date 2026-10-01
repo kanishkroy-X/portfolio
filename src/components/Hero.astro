@@ -48,7 +48,7 @@ import { siteMetadata } from '../data/siteMetadata';
             <span class="text-sm">↓</span>
           </a>
 
-          <!-- Secondary CTA: Let's Talk -->
+          <!-- Secondary CTA: Let's Talk (Direct to Contact Page) -->
           <a
             href="/contact"
             class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-[#DCDCD8] dark:border-[#30302D] bg-white/70 dark:bg-[#181818]/80 text-[#111111] dark:text-[#F5F5F2] text-[13.5px] font-medium hover:bg-white dark:hover:bg-[#202020] hover:border-[#111111] dark:hover:border-[#F5F5F2] transition-all duration-200"
@@ -59,63 +59,101 @@ import { siteMetadata } from '../data/siteMetadata';
 
           <!-- Quick Email Link -->
           <a
-            href={siteMetadata.gmailComposeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={`mailto:${siteMetadata.email}`}
             class="hidden md:inline-flex items-center text-[12.5px] font-mono text-[#6B6B6B] dark:text-[#A3A3A0] hover:text-[#111111] dark:hover:text-[#F5F5F2] ml-2 transition-colors"
-            title="Compose in Gmail"
+            title="Send Email"
           >
             {siteMetadata.email}
           </a>
         </div>
       </div>
 
-      <!-- Right Column: Editorial Hero Visual -->
-      <div class="lg:col-span-5 relative">
-        <!-- Frame container with technical registration markings -->
-        <div class="relative rounded-xl border border-[#DCDCD8] dark:border-[#30302D] bg-[#EFEFEA] dark:bg-[#181818] p-2 sm:p-3 shadow-xs group transition-colors">
-          <!-- Corner Crop Marks -->
+      <!-- Right Column: Dual-Image Editorial Visual Composition (Systems × Identity) -->
+      <div class="lg:col-span-5 relative mt-4 lg:mt-0">
+        <!-- Ambient glow behind dual-composition -->
+        <div class="absolute -inset-4 bg-gradient-to-tr from-[#3157FF]/10 via-transparent to-transparent rounded-2xl blur-xl pointer-events-none -z-10"></div>
+
+        <!-- Primary Frame: Workspace & Systems (IMAGE 01) -->
+        <div class="relative rounded-xl border border-[#DCDCD8] dark:border-[#30302D] bg-[#EFEFEA] dark:bg-[#181818] p-2 sm:p-2.5 shadow-xs transition-colors">
+          <!-- Corner Registration Marks on Primary Frame -->
           <div class="absolute -top-1.5 -left-1.5 w-3 h-3 border-t-2 border-l-2 border-[#111111]/40 dark:border-[#F5F5F2]/40 pointer-events-none"></div>
           <div class="absolute -top-1.5 -right-1.5 w-3 h-3 border-t-2 border-r-2 border-[#111111]/40 dark:border-[#F5F5F2]/40 pointer-events-none"></div>
           <div class="absolute -bottom-1.5 -left-1.5 w-3 h-3 border-b-2 border-l-2 border-[#111111]/40 dark:border-[#F5F5F2]/40 pointer-events-none"></div>
           <div class="absolute -bottom-1.5 -right-1.5 w-3 h-3 border-b-2 border-r-2 border-[#111111]/40 dark:border-[#F5F5F2]/40 pointer-events-none"></div>
 
-          <!-- Hero Image Container with Option A (Studio) and Option B toggle -->
-          <div class="relative overflow-hidden rounded-lg aspect-[4/3] bg-[#161618]">
-            <img
-              id="heroVisual"
-              src="/assets/backgrounds/hero-editorial.jpg"
-              alt="Editorial workspace visual showing systems architecture wireframes and notes"
-              class="w-full h-full object-cover grayscale-[15%] contrast-[1.05] transition-all duration-500 group-hover:scale-[1.02]"
-              loading="eager"
-            />
+          <!-- Primary Image Container -->
+          <div class="relative overflow-hidden rounded-lg aspect-[16/10] sm:aspect-[4/3] bg-[#161618]">
+            <picture>
+              <source srcset="/assets/backgrounds/hero-workspace.webp" type="image/webp" />
+              <img
+                id="heroVisual"
+                src="/assets/backgrounds/hero-editorial.jpg"
+                alt="Creative technical workspace with multiple monitors displaying system architecture wireframes, terminal code, and process notebooks reading 'Ideas to Systems to Real Things'"
+                class="w-full h-full object-cover contrast-[1.03] transition-transform duration-700 hover:scale-[1.02]"
+                loading="eager"
+                width="1376"
+                height="768"
+              />
+            </picture>
 
-            <!-- Dark gradient overlay for bottom metadata -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+            <!-- Dark gradient overlay for bottom metadata readability -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none"></div>
 
             <!-- In-frame Editorial Tag -->
-            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[11px] font-mono text-white/90">
-              <span class="flex items-center gap-2">
+            <div class="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-[10.5px] sm:text-[11px] font-mono text-white/90">
+              <span class="flex items-center gap-1.5">
                 <span class="w-2 h-2 rounded-full bg-[#3157FF] dark:bg-[#6B82FF]"></span>
-                <span>WORKSPACE / 01</span>
+                <span class="font-semibold tracking-wider">FIG 01.1 // SYSTEMS</span>
               </span>
-              <span class="text-white/60 tracking-wider">IDEAS → SYSTEMS → REAL THINGS</span>
+              <span class="hidden sm:inline-block text-white/70 tracking-widest text-[10px]">IDEAS → SYSTEMS → REAL THINGS</span>
             </div>
           </div>
 
-          <!-- Technical visual metadata footer below frame -->
-          <div class="mt-2 px-1 flex items-center justify-between text-[10px] font-mono text-[#6B6B6B] dark:text-[#A3A3A0]">
-            <span>FIG 01.1 // PROCESS NOTEBOOK</span>
-            <div class="flex items-center gap-3">
-              <button
-                type="button"
-                id="toggleHeroBtn"
-                class="hover:text-[#111111] dark:hover:text-[#F5F5F2] underline cursor-pointer"
-                title="Switch between Editorial Workspace (A) and Minimal Architecture (B)"
-              >
-                [ Switch Mode ]
-              </button>
+          <!-- Secondary Inset Frame: Person & Identity (IMAGE 02) -->
+          <div class="absolute -bottom-5 right-2 sm:-bottom-6 sm:-right-4 w-[130px] sm:w-[165px] md:w-[185px] z-20 group">
+            <div class="relative rounded-lg border border-[#DCDCD8] dark:border-[#30302D] bg-[#F7F7F5] dark:bg-[#141414] p-1.5 sm:p-2 shadow-[0_12px_32px_rgba(0,0,0,0.25)] dark:shadow-[0_16px_40px_rgba(0,0,0,0.6)] transition-transform duration-300 group-hover:-translate-y-1">
+              <!-- Portrait Corner Registration Marks -->
+              <div class="absolute -top-1 -left-1 w-2.5 h-2.5 border-t-2 border-l-2 border-[#111111]/40 dark:border-[#F5F5F2]/40 pointer-events-none"></div>
+              <div class="absolute -top-1 -right-1 w-2.5 h-2.5 border-t-2 border-r-2 border-[#111111]/40 dark:border-[#F5F5F2]/40 pointer-events-none"></div>
+              <div class="absolute -bottom-1 -left-1 w-2.5 h-2.5 border-b-2 border-l-2 border-[#111111]/40 dark:border-[#F5F5F2]/40 pointer-events-none"></div>
+              <div class="absolute -bottom-1 -right-1 w-2.5 h-2.5 border-b-2 border-r-2 border-[#111111]/40 dark:border-[#F5F5F2]/40 pointer-events-none"></div>
+
+              <!-- Portrait Image Container with object-top and aspect-ratio preservation -->
+              <div class="relative overflow-hidden rounded aspect-[4/5] bg-[#111111]">
+                <picture>
+                  <source srcset="/assets/personal/kanishk-portrait.webp" type="image/webp" />
+                  <img
+                    src="/assets/personal/kanishk-portrait.jpg"
+                    alt="Close-up portrait of Kanishk Roy wearing glasses and black jacket, product builder and creative technologist"
+                    class="w-full h-full object-cover object-top contrast-[1.02]"
+                    loading="eager"
+                    width="1024"
+                    height="682"
+                  />
+                </picture>
+
+                <!-- Portrait Bottom Minimal Label -->
+                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent p-1.5 sm:p-2 text-white">
+                  <div class="text-[9.5px] sm:text-[10px] font-mono font-semibold tracking-wider flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                    <span>KANISHK ROY</span>
+                  </div>
+                  <div class="text-[8px] sm:text-[8.5px] font-mono text-white/70 tracking-widest uppercase">
+                    BUILDER // ARCHITECT
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <!-- Technical Visual Metadata Footer Below Primary Frame -->
+          <div class="mt-2.5 px-1 flex items-center justify-between text-[10px] font-mono text-[#6B6B6B] dark:text-[#A3A3A0]">
+            <span class="flex items-center gap-1.5">
+              <span>FIG 01.1–01.2</span>
+              <span class="text-[#DCDCD8] dark:text-[#30302D]">/</span>
+              <span>STUDIO &amp; AUTHOR</span>
+            </span>
+            <span class="tracking-wider">22°34'N 88°22'E</span>
           </div>
         </div>
       </div>
@@ -144,25 +182,3 @@ import { siteMetadata } from '../data/siteMetadata';
     </div>
   </div>
 </section>
-
-<script>
-  // Client-side visual toggle between Option A (Workspace) & Option B (Architecture)
-  const toggleBtn = document.getElementById('toggleHeroBtn');
-  const heroImg = document.getElementById('heroVisual') as HTMLImageElement | null;
-  let isOptionA = true;
-
-  if (toggleBtn && heroImg) {
-    toggleBtn.addEventListener('click', () => {
-      isOptionA = !isOptionA;
-      if (isOptionA) {
-        heroImg.src = '/assets/backgrounds/hero-editorial.jpg';
-        heroImg.alt = 'Editorial workspace visual showing systems architecture wireframes and notes';
-        toggleBtn.textContent = '[ Mode: Workspace A ]';
-      } else {
-        heroImg.src = '/assets/backgrounds/hero-architecture.jpg';
-        heroImg.alt = 'Minimal architectural concrete composition with tactile paper texture';
-        toggleBtn.textContent = '[ Mode: Architecture B ]';
-      }
-    });
-  }
-</script>
