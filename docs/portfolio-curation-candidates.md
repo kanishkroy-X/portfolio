@@ -36,18 +36,6 @@ The intake pass across `E:\01_WORK` and `E:\02_CONTENT` revealed 7 newly verifie
 
 ---
 
-## 3. Ongoing Work
-
-### Student Project OS
-- **Workspace Location:** `E:\01_WORK\Websites\student OS`
-- **Category:** Product Architecture & Full-Stack Application
-- **Status:** **ONGOING — HIGH POTENTIAL**
-- **Artifacts on Disk:** Exhaustive 1,935-line PRD (`student_project_os.md`), 24KB `DESIGN.md`, 4.2MB MP4 video concept preview (`visuals/student_os_concept.mp4`), working Astro prototype.
-- **Strategic Value:** Demonstrates sophisticated product architecture, data modeling, and user journey design.
-- **Recommended Placement:** Feature as an active **"Currently Building / In The Lab"** preview module on the homepage to highlight ongoing product leadership.
-
----
-
 ## 4. Flagship Candidates
 
 The portfolio should maintain its focused, high-signal narrative by centering on two powerhouse pillars:
@@ -149,5 +137,4 @@ The commercial video vault has grown from 2 campaigns to 5 distinct productions.
 1. **Commercial Player Option:** Which commercial presentation structure do you prefer?
    - **(Recommended) Option A:** Expand the existing hero AI Ad Studio player to include tabs for Men's Jewellery and Automotive UGC.
    - **Option C:** Create a dedicated `/work/commercials` subpage for an extensive video reel.
-2. **Student Project OS Preview:** Would you like to introduce a sleek "Currently Building / In Progress" preview badge and card on the homepage for Student Project OS?
-3. **New Supporting Additions:** Would you like to feature the **WhatsApp Lead Qualifier (AI Agents)** and **Instagram MCP Server (DevTools)** in the secondary Selected Work grid alongside Wellbeing Nutrition and AI Research Analyst?
+2. **New Supporting Additions:** Would you like to feature the **WhatsApp Lead Qualifier (AI Agents)** and **Instagram MCP Server (DevTools)** in the secondary Selected Work grid alongside Wellbeing Nutrition and AI Research Analyst?
