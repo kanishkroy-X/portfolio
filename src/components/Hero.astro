@@ -1,146 +1,83 @@
 ---
-import { siteMetadata } from '../data/siteMetadata';
 ---
 
-<section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden border-b border-[#DCDCD8]/80 dark:border-[#30302D]/80 transition-colors">
-  <!-- Subtle blue ambient glow behind content -->
-  <div class="absolute top-0 right-1/4 w-[600px] h-[450px] bg-[radial-gradient(ellipse_at_center,_rgba(49,87,255,0.08)_0%,_rgba(247,247,245,0)_70%)] dark:bg-[radial-gradient(ellipse_at_center,_rgba(107,130,255,0.1)_0%,_rgba(17,17,17,0)_70%)] pointer-events-none -z-10" />
-
+<section class="relative pt-12 pb-16 md:pt-20 md:pb-24 border-b border-[#D3D0C9] dark:border-[#26272B] transition-colors">
   <div class="max-w-[1320px] mx-auto px-6">
-    <!-- Top Studio Eyebrow / Coordinates -->
-    <div class="flex flex-wrap items-center justify-between gap-4 mb-8 text-[11px] font-mono uppercase tracking-[0.2em] text-[#6B6B6B] dark:text-[#A3A3A0]">
-      <div class="flex items-center gap-3">
-        <span class="text-[#111111] dark:text-[#F5F5F2] font-semibold">KANISHK ROY</span>
-        <span class="text-[#DCDCD8] dark:text-[#30302D]">/</span>
-        <span>PRODUCT STUDIO × TECH LAB</span>
-      </div>
-      <div class="hidden sm:flex items-center gap-4">
-        <span>22°34'N 88°22'E</span>
-        <span class="text-[#DCDCD8] dark:text-[#30302D]">•</span>
-        <span>KOLKATA, IN</span>
-      </div>
-    </div>
-
-    <!-- Main Headline Grid -->
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-      <!-- Left Column: Copy & CTAs -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+      <!-- Left Column: Typography & CTAs -->
       <div class="lg:col-span-7 flex flex-col justify-center">
-        <h1 class="text-4xl sm:text-6xl lg:text-[68px] font-bold text-[#111111] dark:text-[#F5F5F2] tracking-[-0.035em] leading-[1.05] mb-6">
-          I build digital products &amp; AI-powered systems.
+        <!-- Eyebrow -->
+        <div class="text-[12px] font-mono tracking-[0.24em] uppercase text-[#555555] dark:text-[#A0A09B] font-semibold mb-4">
+          PORTFOLIO // 2026
+        </div>
+
+        <!-- Name -->
+        <h1 class="text-4xl sm:text-6xl lg:text-[72px] font-extrabold text-[#111111] dark:text-[#F3F1EC] tracking-[-0.035em] leading-[1.02] mb-5">
+          KANISHK ROY
         </h1>
 
-        <p class="text-lg sm:text-xl font-medium text-[#111111] dark:text-[#F5F5F2] mb-4 tracking-tight">
-          Product thinking × AI × hands-on execution.
+        <!-- Primary Positioning -->
+        <div class="text-xl sm:text-2xl lg:text-[26px] font-mono font-bold tracking-[0.08em] text-[#111111] dark:text-[#F3F1EC] uppercase mb-4">
+          AI CONTENT / CREATIVE PRODUCTION
+        </div>
+
+        <!-- Supporting Line -->
+        <p class="text-base sm:text-lg text-[#555555] dark:text-[#A0A09B] leading-relaxed max-w-[540px] mb-8 font-sans">
+          AI-powered commercials, UGC &amp; visual experiences. Combining creative direction with production systems and product thinking.
         </p>
 
-        <p class="text-base sm:text-[17px] text-[#6B6B6B] dark:text-[#A3A3A0] leading-relaxed max-w-[560px] mb-10">
-          I take messy ideas, break them down, and turn them into working products, edge systems, and creative experiences. Evidence over decoration. Real work over generic claims.
-        </p>
-
-        <!-- CTA Action Bar -->
+        <!-- Minimal CTAs -->
         <div class="flex flex-wrap items-center gap-4">
-          <!-- Primary CTA: Explore Work -->
           <a
-            href="#featured-work"
-            class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-[#3157FF] dark:bg-[#6B82FF] text-white dark:text-[#111111] text-[13.5px] font-medium hover:bg-[#2143E0] dark:hover:bg-[#8EA0FF] hover:shadow-[0_4px_20px_rgba(49,87,255,0.25)] transition-all duration-200"
+            href="#ai-content"
+            class="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-[#111111] dark:bg-[#F3F1EC] text-[#F3F1EC] dark:text-[#111111] text-xs font-mono font-bold tracking-[0.14em] uppercase hover:bg-[#315CFF] dark:hover:bg-[#315CFF] hover:text-white dark:hover:text-white transition-all duration-200"
           >
-            <span>Explore Work</span>
-            <span class="text-sm">↓</span>
+            <span>VIEW WORK</span>
+            <span class="text-sm">→</span>
           </a>
 
-          <!-- Secondary CTA: Let's Talk (Direct to Contact Page) -->
           <a
-            href="/contact"
-            class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-[#DCDCD8] dark:border-[#30302D] bg-white/70 dark:bg-[#181818]/80 text-[#111111] dark:text-[#F5F5F2] text-[13.5px] font-medium hover:bg-white dark:hover:bg-[#202020] hover:border-[#111111] dark:hover:border-[#F5F5F2] transition-all duration-200"
+            href="#about"
+            class="inline-flex items-center gap-2 px-6 py-3 rounded-md border border-[#D3D0C9] dark:border-[#26272B] bg-white/40 dark:bg-[#151619]/60 text-[#111111] dark:text-[#F3F1EC] text-xs font-mono font-semibold tracking-[0.14em] uppercase hover:border-[#111111] dark:hover:border-[#F3F1EC] transition-all duration-200"
           >
-            <span>Let's Talk</span>
-            <span class="text-xs text-[#6B6B6B] dark:text-[#A3A3A0]">↗</span>
-          </a>
-
-          <!-- Quick Email Link -->
-          <a
-            href={`mailto:${siteMetadata.email}`}
-            class="hidden md:inline-flex items-center text-[12.5px] font-mono text-[#6B6B6B] dark:text-[#A3A3A0] hover:text-[#111111] dark:hover:text-[#F5F5F2] ml-2 transition-colors"
-            title="Send Email"
-          >
-            {siteMetadata.email}
+            <span>ABOUT</span>
+            <span class="text-sm">→</span>
           </a>
         </div>
       </div>
 
-      <!-- Right Column: Personal Identity Editorial Frame (FIG 01.2 // IDENTITY) -->
-      <div class="lg:col-span-5 relative mt-4 lg:mt-0">
-        <!-- Ambient glow behind visual frame -->
-        <div class="absolute -inset-4 bg-gradient-to-tr from-[#3157FF]/10 via-transparent to-transparent rounded-2xl blur-xl pointer-events-none -z-10"></div>
-
-        <!-- Frame: Person & Identity -->
-        <div class="relative rounded-xl border border-[#DCDCD8] dark:border-[#30302D] bg-[#EFEFEA] dark:bg-[#181818] p-2 sm:p-2.5 shadow-xs transition-colors">
-          <!-- Corner Registration Marks on Frame -->
-          <div class="absolute -top-1.5 -left-1.5 w-3 h-3 border-t-2 border-l-2 border-[#111111]/40 dark:border-[#F5F5F2]/40 pointer-events-none"></div>
-          <div class="absolute -top-1.5 -right-1.5 w-3 h-3 border-t-2 border-r-2 border-[#111111]/40 dark:border-[#F5F5F2]/40 pointer-events-none"></div>
-          <div class="absolute -bottom-1.5 -left-1.5 w-3 h-3 border-b-2 border-l-2 border-[#111111]/40 dark:border-[#F5F5F2]/40 pointer-events-none"></div>
-          <div class="absolute -bottom-1.5 -right-1.5 w-3 h-3 border-b-2 border-r-2 border-[#111111]/40 dark:border-[#F5F5F2]/40 pointer-events-none"></div>
-
-          <!-- Primary Image Container -->
-          <div class="relative overflow-hidden rounded-lg aspect-[4/3] bg-[#161618]">
+      <!-- Right Column: Visual Frame with Portrait -->
+      <div class="lg:col-span-5 relative">
+        <div class="relative rounded-lg border border-[#D3D0C9] dark:border-[#26272B] bg-[#E7E4DE] dark:bg-[#151619] p-2 shadow-xs overflow-hidden">
+          <div class="relative overflow-hidden rounded aspect-[4/3] bg-[#0D0E10]">
             <picture>
               <source srcset="/assets/personal/kanishk-portrait.webp" type="image/webp" />
               <img
-                id="heroVisual"
                 src="/assets/personal/kanishk-portrait.jpg"
-                alt="Portrait of Kanishk Roy wearing glasses and black jacket, product builder and creative technologist"
-                class="w-full h-full object-cover object-top contrast-[1.02] transition-transform duration-700 hover:scale-[1.02]"
+                alt="Portrait of Kanishk Roy — AI Content & Creative Production"
+                class="w-full h-full object-cover object-top filter grayscale contrast-[1.05] transition-transform duration-700 hover:scale-[1.02]"
                 loading="eager"
                 width="1024"
                 height="682"
               />
             </picture>
 
-            <!-- Dark gradient overlay for bottom metadata readability -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent pointer-events-none"></div>
-
-            <!-- In-frame Editorial Tag -->
-            <div class="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-[10.5px] sm:text-[11px] font-mono text-white/90">
-              <span class="flex items-center gap-1.5">
-                <span class="w-2 h-2 rounded-full bg-[#10B981]"></span>
-                <span class="font-semibold tracking-wider">FIG 01.2 // IDENTITY</span>
+            <!-- Bottom Frame Subtle Label -->
+            <div class="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-[10px] font-mono text-white/90">
+              <span class="flex items-center gap-1.5 shrink-0">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#315CFF]"></span>
+                <span class="tracking-wider">KANISHK ROY</span>
               </span>
-              <span class="tracking-widest text-[10px] text-white/80 uppercase">KANISHK ROY // PRODUCT BUILDER &amp; ARCHITECT</span>
+              <span class="tracking-widest uppercase text-white/70 text-[9.5px] shrink-0 text-right">CREATIVE DIRECTION</span>
             </div>
           </div>
 
-          <!-- Technical Visual Metadata Footer Below Frame -->
-          <div class="mt-2.5 px-1 flex items-center justify-between text-[10px] font-mono text-[#6B6B6B] dark:text-[#A3A3A0]">
-            <span class="flex items-center gap-1.5">
-              <span>FIG 01.2</span>
-              <span class="text-[#DCDCD8] dark:text-[#30302D]">/</span>
-              <span>IDENTITY &amp; AUTHOR</span>
-            </span>
-            <span class="tracking-wider">22°34'N 88°22'E • KOLKATA, IN</span>
+          <!-- Technical Sub-caption -->
+          <div class="mt-2 px-1 flex items-center justify-between text-[10.5px] font-mono text-[#555555] dark:text-[#A0A09B]">
+            <span>FIG 01 // IDENTITY</span>
+            <span>KOLKATA, IN</span>
           </div>
         </div>
-      </div>
-    </div>
-
-    <!-- Editorial Annotation Ribbon -->
-    <div class="mt-16 pt-8 border-t border-[#DCDCD8]/60 dark:border-[#30302D]/60 flex flex-wrap items-center justify-between gap-6 text-[11.5px] font-mono text-[#6B6B6B] dark:text-[#A3A3A0] transition-colors">
-      <div class="flex items-center gap-6">
-        <span class="text-[#111111] dark:text-[#F5F5F2] font-semibold">CORE PILLARS:</span>
-        <span class="flex items-center gap-2">
-          <span class="w-1.5 h-1.5 rounded-full bg-[#111111] dark:bg-[#F5F5F2]"></span>
-          <span>01 REAL-TIME SYSTEMS</span>
-        </span>
-        <span class="flex items-center gap-2">
-          <span class="w-1.5 h-1.5 rounded-full bg-[#3157FF] dark:bg-[#6B82FF]"></span>
-          <span>02 GENERATIVE AI PRODUCTION</span>
-        </span>
-        <span class="flex items-center gap-2">
-          <span class="w-1.5 h-1.5 rounded-full bg-[#111111] dark:bg-[#F5F5F2]"></span>
-          <span>03 EVIDENCE-BACKED RESEARCH</span>
-        </span>
-      </div>
-      <div class="text-[#8E8E93] dark:text-[#777774]">
-        ZERO FAKE METRICS • EVIDENCE-FIRST
       </div>
     </div>
   </div>

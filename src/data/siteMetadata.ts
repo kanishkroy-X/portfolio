@@ -16,10 +16,10 @@ export interface SiteMetadata {
 }
 
 export const siteMetadata: SiteMetadata = {
-  title: "Kanishk Roy — Digital Products & AI-Powered Systems",
+  title: "Kanishk Roy — AI Content & Creative Production",
   author: "Kanishk Roy",
-  tagline: "Product thinking × AI × hands-on execution",
-  description: "I build digital products & AI-powered systems. I take messy ideas, break them down, and turn them into working products, systems, and creative experiences.",
+  tagline: "AI CONTENT / CREATIVE PRODUCTION",
+  description: "AI-powered commercials, UGC & visual experiences. Combining creative direction with practical production systems and product thinking.",
   url: "https://kanishkroy.com",
   location: "Kolkata, India",
   email: "kanishkroy2004@gmail.com",

@@ -2,81 +2,68 @@
 import { siteMetadata } from '../data/siteMetadata';
 ---
 
-<section id="contact" class="py-24 md:py-32 relative overflow-hidden transition-colors">
-  <!-- Subtle blue ambient glow -->
-  <div class="absolute bottom-0 left-1/3 w-[500px] h-[350px] bg-[radial-gradient(ellipse_at_center,_rgba(49,87,255,0.08)_0%,_rgba(247,247,245,0)_70%)] dark:bg-[radial-gradient(ellipse_at_center,_rgba(107,130,255,0.1)_0%,_rgba(17,17,17,0)_70%)] pointer-events-none -z-10"></div>
-
+<section id="contact" class="py-20 md:py-28 transition-colors">
   <div class="max-w-[1320px] mx-auto px-6">
     <div class="max-w-3xl">
-      <div class="text-xs font-mono text-[#3157FF] dark:text-[#6B82FF] tracking-[0.2em] uppercase font-bold mb-3">
-        07 // CONTACT &amp; COLLABORATION
+      <div class="text-xs font-mono tracking-[0.24em] uppercase text-[#315CFF] font-bold mb-3">
+        06 // CONTACT
       </div>
 
-      <h2 class="text-3xl sm:text-5xl font-bold text-[#111111] dark:text-[#F5F5F2] tracking-tight leading-[1.1] mb-6">
-        Let's build something real together.
+      <h2 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#111111] dark:text-[#F3F1EC] tracking-tight leading-[1.05] mb-8 font-mono">
+        LET'S MAKE SOMETHING.
       </h2>
 
-      <p class="text-base sm:text-lg text-[#6B6B6B] dark:text-[#A3A3A0] leading-relaxed mb-10">
-        Whether you are engineering an edge application, building an AI-backed pipeline, or need creative direction for a brand video campaign, I am open to discussing new projects and technical advisory roles.
-      </p>
-
-      <!-- Primary Action: Open Mail App -->
-      <div class="mb-12">
+      <!-- Minimal Primary CTA -->
+      <div class="mb-14">
         <a
           href={`mailto:${siteMetadata.email}`}
-          class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#111111] dark:bg-[#F5F5F2] text-white dark:text-[#111111] text-[15px] font-medium hover:bg-[#3157FF] dark:hover:bg-[#6B82FF] hover:text-white transition-all duration-200 shadow-md group focus:outline-none focus:ring-2 focus:ring-[#3157FF]"
+          class="inline-flex items-center gap-2.5 px-8 py-4 rounded-md bg-[#111111] dark:bg-[#F3F1EC] text-[#F3F1EC] dark:text-[#111111] text-xs font-mono font-bold tracking-[0.16em] uppercase hover:bg-[#315CFF] dark:hover:bg-[#315CFF] hover:text-white dark:hover:text-white transition-all duration-200"
         >
-          <span>Open Mail App</span>
-          <span class="text-sm transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
+          <span>GET IN TOUCH</span>
+          <span class="text-sm">→</span>
         </a>
       </div>
 
-      <!-- Verified Channels Grid -->
-      <div class="pt-10 border-t border-[#DCDCD8] dark:border-[#30302D] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 text-xs font-mono">
-        <!-- Direct Email -->
-        <div>
-          <div class="text-[#8E8E93] dark:text-[#777774] uppercase mb-1">Direct Email</div>
-          <a href={`mailto:${siteMetadata.email}`} class="text-[#111111] dark:text-[#F5F5F2] hover:text-[#3157FF] dark:hover:text-[#6B82FF] font-semibold break-all transition-colors flex items-center gap-1">
-            <span>Email</span>
-            <span class="text-[10px]">↗</span>
-          </a>
-        </div>
-
-        <!-- LinkedIn -->
-        <div>
-          <div class="text-[#8E8E93] dark:text-[#777774] uppercase mb-1">LinkedIn</div>
-          <a href={siteMetadata.social.linkedin} target="_blank" rel="noopener noreferrer" class="text-[#111111] dark:text-[#F5F5F2] hover:text-[#3157FF] dark:hover:text-[#6B82FF] font-semibold transition-colors flex items-center gap-1">
-            <span>Kanishk Roy</span>
-            <span class="text-[10px]">↗</span>
-          </a>
-        </div>
-
-        <!-- GitHub -->
-        <div>
-          <div class="text-[#8E8E93] dark:text-[#777774] uppercase mb-1">GitHub</div>
-          <a href={siteMetadata.social.github} target="_blank" rel="noopener noreferrer" class="text-[#111111] dark:text-[#F5F5F2] hover:text-[#3157FF] dark:hover:text-[#6B82FF] font-semibold transition-colors flex items-center gap-1">
-            <span>@kanishkroy-X</span>
-            <span class="text-[10px]">↗</span>
-          </a>
-        </div>
-
-        <!-- X -->
-        <div>
-          <div class="text-[#8E8E93] dark:text-[#777774] uppercase mb-1">X / Twitter</div>
-          <a href={siteMetadata.social.x} target="_blank" rel="noopener noreferrer" class="text-[#111111] dark:text-[#F5F5F2] hover:text-[#3157FF] dark:hover:text-[#6B82FF] font-semibold transition-colors flex items-center gap-1">
-            <span>@kanishkroy_</span>
-            <span class="text-[10px]">↗</span>
-          </a>
-        </div>
-
-        <!-- YouTube -->
-        <div>
-          <div class="text-[#8E8E93] dark:text-[#777774] uppercase mb-1">YouTube</div>
-          <a href={siteMetadata.social.youtube} target="_blank" rel="noopener noreferrer" class="text-[#111111] dark:text-[#F5F5F2] hover:text-[#3157FF] dark:hover:text-[#6B82FF] font-semibold transition-colors flex items-center gap-1">
-            <span>@Yokigaming_</span>
-            <span class="text-[10px]">↗</span>
-          </a>
-        </div>
+      <!-- Professional Links -->
+      <div class="pt-8 border-t border-[#D3D0C9] dark:border-[#26272B] flex flex-wrap items-center gap-6 sm:gap-8 text-xs font-mono">
+        <a
+          href={`mailto:${siteMetadata.email}`}
+          class="text-[#555555] dark:text-[#A0A09B] hover:text-[#111111] dark:hover:text-[#F3F1EC] transition-colors"
+        >
+          {siteMetadata.email} ↗
+        </a>
+        <a
+          href={siteMetadata.social.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-[#555555] dark:text-[#A0A09B] hover:text-[#111111] dark:hover:text-[#F3F1EC] transition-colors"
+        >
+          LinkedIn ↗
+        </a>
+        <a
+          href={siteMetadata.social.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-[#555555] dark:text-[#A0A09B] hover:text-[#111111] dark:hover:text-[#F3F1EC] transition-colors"
+        >
+          GitHub ↗
+        </a>
+        <a
+          href={siteMetadata.social.x}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-[#555555] dark:text-[#A0A09B] hover:text-[#111111] dark:hover:text-[#F3F1EC] transition-colors"
+        >
+          X (Twitter) ↗
+        </a>
+        <a
+          href={siteMetadata.social.youtube}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-[#555555] dark:text-[#A0A09B] hover:text-[#111111] dark:hover:text-[#F3F1EC] transition-colors"
+        >
+          YouTube ↗
+        </a>
       </div>
     </div>
   </div>

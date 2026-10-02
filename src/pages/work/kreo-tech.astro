@@ -1,0 +1,73 @@
+---
+import CaseStudyLayout from '../../components/CaseStudyLayout.astro';
+import VideoFacade from '../../components/VideoFacade.astro';
+import { aiContentProjects } from '../../data/projects';
+
+const project = aiContentProjects.find(p => p.id === 'kreo-tech')!;
+---
+
+<CaseStudyLayout project={project}>
+  <!-- Hero Media Slot: 16:9 Widescreen Commercial Facade -->
+  <div slot="hero-media" class="space-y-6">
+    <div class="rounded-xl border border-[#D3D0C9] dark:border-[#26272B] bg-[#0D0E10] overflow-hidden shadow-2xl p-4 sm:p-8">
+      <div class="flex items-center justify-between text-xs font-mono text-[#A0A09B] mb-4 pb-3 border-b border-[#26272B]">
+        <span class="text-white font-semibold">KREO_TECH_COMMERCIAL_16X9</span>
+        <span class="text-[#315CFF]">16:9 CINEMATIC MASTER</span>
+      </div>
+
+      <VideoFacade
+        videoId={project.videoId!}
+        title="Kreo Tech AI Commercial"
+        posterJpg="/assets/projects/ai-ad-production/kreo-tech-poster.jpg"
+        posterWebp="/assets/projects/ai-ad-production/kreo-tech-poster.webp"
+        isVertical={false}
+      />
+
+      <div class="flex items-center justify-between text-[11px] font-mono text-[#A0A09B] mt-4 pt-3 border-t border-[#26272B]">
+        <span>Macro Mechanical Hardware Cinematography</span>
+        <a
+          href={project.video}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-[#315CFF] hover:underline"
+        >
+          Watch on YouTube ↗
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pipeline Architecture Slot -->
+  <div slot="diagram" class="space-y-6">
+    <div class="text-xs font-mono uppercase tracking-[0.2em] text-[#315CFF] font-bold">
+      PIPELINE ARCHITECTURE // MACRO HARDWARE LIGHTING
+    </div>
+    
+    <div class="rounded-xl overflow-hidden border border-[#D3D0C9] dark:border-[#26272B] bg-[#0D0E10]">
+      <img
+        src="/assets/projects/ai-ad-production/pipeline-visual.svg"
+        alt="Production Pipeline Architecture"
+        class="w-full h-auto"
+        loading="lazy"
+      />
+    </div>
+    <p class="text-xs font-mono text-[#555555] dark:text-[#A0A09B]">
+      Industrial design prompt tokens: locking chassis seams, matte black diffusion, and anodized aluminum specular glints.
+    </p>
+  </div>
+
+  <!-- Evidence Slot -->
+  <div slot="evidence" class="space-y-6">
+    <div class="text-xs font-mono uppercase tracking-[0.2em] text-[#315CFF] font-bold">
+      VERIFIED MASTER // CINEMATIC FRAMING
+    </div>
+
+    <div class="p-6 rounded-lg border border-[#D3D0C9] dark:border-[#26272B] bg-white/40 dark:bg-[#151619] flex items-center justify-between text-xs font-mono">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-[#10B981]"></span>
+        <span class="text-[#111111] dark:text-[#F3F1EC] font-semibold">1080P WIDESCREEN CONFORMED TIMELINE</span>
+      </div>
+      <span class="text-[#7B8798]">AIR DATE: 2026</span>
+    </div>
+  </div>
+</CaseStudyLayout>

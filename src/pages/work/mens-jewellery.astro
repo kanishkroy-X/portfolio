@@ -1,262 +1,160 @@
 ---
 import CaseStudyLayout from '../../components/CaseStudyLayout.astro';
-import { projects } from '../../data/projects';
+import VideoFacade from '../../components/VideoFacade.astro';
+import { aiContentProjects } from '../../data/projects';
 
-const project = projects.find(p => p.id === 'mens-jewellery')!;
+const project = aiContentProjects.find(p => p.id === 'mens-jewellery')!;
 ---
 
 <CaseStudyLayout project={project}>
-  <!-- Hero Media Slot: 16:9 Click-to-Play Video Facade -->
-  <div slot="hero-media" class="space-y-8">
-    <div class="rounded-xl border border-[#DCDCD8] dark:border-[#30302D] bg-[#0E0E10] overflow-hidden shadow-xl">
-      <!-- Frame Top Bar -->
-      <div class="px-4 py-3 bg-[#141416] border-b border-[#262628] flex items-center justify-between text-xs font-mono text-[#8E8E93]">
-        <div class="flex items-center gap-2">
-          <span class="w-2.5 h-2.5 rounded-full bg-[#EF4444]"></span>
-          <span class="w-2.5 h-2.5 rounded-full bg-[#F59E0B]"></span>
-          <span class="w-2.5 h-2.5 rounded-full bg-[#10B981]"></span>
-          <span class="ml-2 text-white">MENS_JEWELLERY_COMMERCIAL_1080P</span>
-        </div>
-        <span class="text-[#3157FF] dark:text-[#6B82FF] font-semibold">16:9 WIDESCREEN COMMERCIAL MASTER</span>
+  <!-- Hero Media Slot: Responsive 16:9 Click-to-Play Video Facade -->
+  <div slot="hero-media" class="space-y-6">
+    <div class="rounded-xl border border-[#D3D0C9] dark:border-[#26272B] bg-[#0D0E10] overflow-hidden shadow-2xl p-4 sm:p-8">
+      <div class="flex items-center justify-between text-xs font-mono text-[#A0A09B] mb-4 pb-3 border-b border-[#26272B]">
+        <span class="text-white font-semibold">MENS_JEWELLERY_COMMERCIAL_1080P</span>
+        <span class="text-[#315CFF]">16:9 LUXURY COMMERCIAL MASTER</span>
       </div>
 
-      <!-- Player Stage with Aspect Ratio 16/9 -->
-      <div class="relative bg-black flex items-center justify-center p-3 sm:p-6 min-h-[320px] sm:min-h-[480px]">
-        <div
-          id="mensVideoWrapper"
-          class="w-full max-w-[960px] aspect-[16/9] rounded-lg overflow-hidden shadow-2xl bg-black relative"
+      <VideoFacade
+        videoId="h6nyN1gyFvI"
+        title="Men's Jewellery Luxury Commercial"
+        posterJpg="/assets/projects/mens-jewellery/hero-poster.jpg"
+        posterWebp="/assets/projects/mens-jewellery/hero-poster.webp"
+        isVertical={false}
+      />
+
+      <div class="flex items-center justify-between text-[11px] font-mono text-[#A0A09B] mt-4 pt-3 border-t border-[#26272B]">
+        <span>Macro Metal Physics &amp; Specular Reflections</span>
+        <a
+          href="https://www.youtube.com/watch?v=h6nyN1gyFvI"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-[#315CFF] hover:underline"
         >
-          <!-- Facade Poster (Click-to-Play) -->
-          <div
-            id="mensVideoFacade"
-            class="absolute inset-0 z-10 w-full h-full flex flex-col items-center justify-center cursor-pointer group/facade select-none overflow-hidden"
-          >
-            <picture>
-              <source srcset="/assets/projects/mens-jewellery/hero-poster.webp" type="image/webp" />
-              <img
-                src="/assets/projects/mens-jewellery/hero-poster.jpg"
-                alt="Men's Jewellery Luxury Commercial Master Poster"
-                class="absolute inset-0 w-full h-full object-cover brightness-95 group-hover/facade:scale-105 transition-transform duration-500 motion-reduce:transform-none"
-                loading="eager"
-                width="1440"
-                height="810"
-              />
-            </picture>
-
-            <!-- Vignette overlay -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/45 group-hover/facade:from-black/75 transition-colors"></div>
-
-            <!-- Interactive Trigger -->
-            <button
-              id="activateMensVideoBtn"
-              type="button"
-              class="relative z-20 flex flex-col items-center gap-3 p-4 text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3157FF] dark:focus-visible:ring-[#6B82FF] rounded-2xl cursor-pointer"
-              aria-label="Play Men's Jewellery Luxury Commercial Master"
-            >
-              <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-black/60 backdrop-blur-md border border-white/25 flex items-center justify-center shadow-lg group-hover/facade:bg-[#3157FF] group-hover/facade:border-transparent group-hover/facade:scale-110 transition-all duration-300 motion-reduce:transition-none">
-                <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white fill-current translate-x-0.5" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-              <div class="px-3 py-1 rounded-full bg-black/75 backdrop-blur-md border border-white/20 text-[10.5px] font-mono tracking-wider uppercase text-white/90 group-hover/facade:text-white transition-colors">
-                <span>▶ LOAD 1080P MASTER</span>
-              </div>
-            </button>
-
-            <!-- Bottom Badges -->
-            <div class="absolute bottom-3 inset-x-3 flex items-center justify-between text-[10px] font-mono text-white/70 pointer-events-none">
-              <span class="flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-[#10B981]"></span>
-                <span>STUDIO MASTER</span>
-              </span>
-              <span>16:9 WIDESCREEN</span>
-            </div>
-          </div>
-
-          <!-- Mount Point for YouTube IFrame -->
-          <div id="mensIframeMount" class="w-full h-full"></div>
-        </div>
-      </div>
-
-      <!-- Frame Bottom Action Bar -->
-      <div class="px-4 py-3 bg-[#141416] border-t border-[#262628] flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-white/80">
-        <div class="flex items-center gap-3">
-          <span class="text-[#8E8E93]">Direct In-Page Player</span>
-          <span class="text-[#262628]">•</span>
-          <span class="text-[#10B981]">1080p Master</span>
-        </div>
-        <div>
-          <a
-            href="https://youtu.be/h6nyN1gyFvI?si=dJKXgoiJV2tEi55V"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-[#3157FF] dark:text-[#6B82FF] hover:underline flex items-center gap-1"
-          >
-            <span>Watch on YouTube</span>
-            <span>↗</span>
-          </a>
-        </div>
+          Watch on YouTube ↗
+        </a>
       </div>
     </div>
   </div>
 
-  <!-- Technical Specular & Consistency Pipeline Diagram -->
+  <!-- Pipeline Architecture Slot -->
   <div slot="diagram" class="space-y-6">
-    <h2 class="text-xs font-mono uppercase tracking-[0.2em] text-[#3157FF] dark:text-[#6B82FF] font-bold mb-3">
+    <div class="text-xs font-mono uppercase tracking-[0.2em] text-[#315CFF] font-bold">
       PIPELINE ARCHITECTURE // MACRO SPECULAR LIGHTING &amp; CONSISTENCY
-    </h2>
+    </div>
     
-    <div class="p-6 sm:p-8 rounded-xl border border-[#DCDCD8] dark:border-[#30302D] bg-white dark:bg-[#181818] transition-colors">
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs font-mono">
-        <div class="p-4 rounded-lg border border-[#DCDCD8] dark:border-[#30302D] bg-[#F7F7F5] dark:bg-[#141416]">
-          <span class="text-[#3157FF] dark:text-[#6B82FF] font-bold">STAGE 01</span>
-          <h3 class="text-sm font-bold text-[#111111] dark:text-[#F5F5F2] mt-1 mb-2 font-sans">Multi-Angle Character Sheets</h3>
-          <p class="text-[#6B6B6B] dark:text-[#A3A3A0] font-sans leading-relaxed">
-            5 camera-angle master references generated to establish invariant facial geometry, skin undertones, and wardrobe styling prior to video prompting.
-          </p>
-        </div>
-        <div class="p-4 rounded-lg border border-[#DCDCD8] dark:border-[#30302D] bg-[#F7F7F5] dark:bg-[#141416]">
-          <span class="text-[#3157FF] dark:text-[#6B82FF] font-bold">STAGE 02</span>
-          <h3 class="text-sm font-bold text-[#111111] dark:text-[#F5F5F2] mt-1 mb-2 font-sans">Macro Glare Token Isolation</h3>
-          <p class="text-[#6B6B6B] dark:text-[#A3A3A0] font-sans leading-relaxed">
-            Decoupled specular reflection passes from metallic chain geometry prompts, forcing optical edge glints without surface melting.
-          </p>
-        </div>
-        <div class="p-4 rounded-lg border border-[#DCDCD8] dark:border-[#30302D] bg-[#F7F7F5] dark:bg-[#141416]">
-          <span class="text-[#10B981] font-bold">STAGE 03</span>
-          <h3 class="text-sm font-bold text-[#111111] dark:text-[#F5F5F2] mt-1 mb-2 font-sans">Studio Grade Assembly</h3>
-          <p class="text-[#6B6B6B] dark:text-[#A3A3A0] font-sans leading-relaxed">
-            Sub-5% curation gate feeding into timeline conforming in Premiere Pro with tactile metallic foley sound and sub-bass dynamics.
-          </p>
-        </div>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-mono">
+      <div class="p-4 rounded-lg border border-[#D3D0C9] dark:border-[#26272B] bg-white/40 dark:bg-[#151619]">
+        <div class="text-[#315CFF] font-bold mb-1">01 / CONSISTENCY</div>
+        <div class="text-sm font-bold text-[#111111] dark:text-[#F3F1EC] mb-1 font-sans">Multi-Angle Character Sheets</div>
+        <p class="text-[#555555] dark:text-[#A0A09B] leading-relaxed font-sans">
+          5-angle anchor references locking facial geometry, skin tones, and styling.
+        </p>
+      </div>
+
+      <div class="p-4 rounded-lg border border-[#D3D0C9] dark:border-[#26272B] bg-white/40 dark:bg-[#151619]">
+        <div class="text-[#315CFF] font-bold mb-1">02 / REFLECTION</div>
+        <div class="text-sm font-bold text-[#111111] dark:text-[#F3F1EC] mb-1 font-sans">Macro Glare Token Isolation</div>
+        <p class="text-[#555555] dark:text-[#A0A09B] leading-relaxed font-sans">
+          Decoupled specular reflection passes preventing link melting and temporal jitter.
+        </p>
+      </div>
+
+      <div class="p-4 rounded-lg border border-[#D3D0C9] dark:border-[#26272B] bg-white/40 dark:bg-[#151619]">
+        <div class="text-[#10B981] font-bold mb-1">03 / CONFORM</div>
+        <div class="text-sm font-bold text-[#111111] dark:text-[#F3F1EC] mb-1 font-sans">Studio Grade Assembly</div>
+        <p class="text-[#555555] dark:text-[#A0A09B] leading-relaxed font-sans">
+          Sub-5% curation gate with tactile metallic Foley mix and sub-bass dynamics.
+        </p>
       </div>
     </div>
   </div>
 
-  <!-- Character Sheets & Macro Prop Evidence -->
-  <div slot="evidence" class="space-y-8">
-    <div>
-      <h2 class="text-xs font-mono uppercase tracking-[0.2em] text-[#3157FF] dark:text-[#6B82FF] font-bold mb-4">
-        VERIFIED EVIDENCE // CHARACTER &amp; LIGHTING CONSISTENCY SHEETS
-      </h2>
-      <p class="text-sm text-[#6B6B6B] dark:text-[#A3A3A0] mb-6">
-        Excerpts from the pre-production character sheet asset deck showing facial geometry consistency and dark studio rim-lighting calibration across multiple focal angles.
-      </p>
+  <!-- Evidence Slot: 6-Sheet Model & Prop Consistency Deck -->
+  <div slot="evidence" class="space-y-6">
+    <div class="text-xs font-mono uppercase tracking-[0.2em] text-[#315CFF] font-bold">
+      6-SHEET MODEL &amp; PROP CONSISTENCY DECK
+    </div>
 
-      <!-- Image Grid of Character Sheets -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        <div class="rounded-lg overflow-hidden border border-[#DCDCD8] dark:border-[#30302D] bg-[#0E0E10]">
-          <img
-            src="/assets/projects/mens-jewellery/character-1.webp"
-            alt="Character Sheet Setup 01 - Primary Portrait"
-            class="w-full h-auto object-cover"
-            loading="lazy"
-          />
-          <div class="p-3 bg-white dark:bg-[#181818] border-t border-[#DCDCD8] dark:border-[#30302D] text-[11px] font-mono text-[#6B6B6B] dark:text-[#A3A3A0]">
-            Sheet 01: Master model portrait anchor
-          </div>
+    <!-- 6-Asset Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
+      <div class="rounded-lg overflow-hidden border border-[#D3D0C9] dark:border-[#26272B] bg-[#0D0E10]">
+        <img
+          src="/assets/projects/mens-jewellery/character-1.webp"
+          alt="Character Sheet Setup 01"
+          class="w-full aspect-[4/5] object-cover"
+          loading="lazy"
+        />
+        <div class="p-2.5 bg-white/60 dark:bg-[#151619] border-t border-[#D3D0C9] dark:border-[#26272B] text-[10.5px] font-mono text-[#555555] dark:text-[#A0A09B]">
+          01 // Master model portrait anchor
         </div>
+      </div>
 
-        <div class="rounded-lg overflow-hidden border border-[#DCDCD8] dark:border-[#30302D] bg-[#0E0E10]">
-          <img
-            src="/assets/projects/mens-jewellery/character-2.webp"
-            alt="Character Sheet Setup 02 - Profile & Rim Lighting"
-            class="w-full h-auto object-cover"
-            loading="lazy"
-          />
-          <div class="p-3 bg-white dark:bg-[#181818] border-t border-[#DCDCD8] dark:border-[#30302D] text-[11px] font-mono text-[#6B6B6B] dark:text-[#A3A3A0]">
-            Sheet 02: 45-degree rim-light angle
-          </div>
+      <div class="rounded-lg overflow-hidden border border-[#D3D0C9] dark:border-[#26272B] bg-[#0D0E10]">
+        <img
+          src="/assets/projects/mens-jewellery/character-2.webp"
+          alt="Character Sheet Setup 02"
+          class="w-full aspect-[4/5] object-cover"
+          loading="lazy"
+        />
+        <div class="p-2.5 bg-white/60 dark:bg-[#151619] border-t border-[#D3D0C9] dark:border-[#26272B] text-[10.5px] font-mono text-[#555555] dark:text-[#A0A09B]">
+          02 // 45° dark rim-light angle
         </div>
+      </div>
 
-        <div class="rounded-lg overflow-hidden border border-[#DCDCD8] dark:border-[#30302D] bg-[#0E0E10]">
-          <img
-            src="/assets/projects/mens-jewellery/character-3.webp"
-            alt="Character Sheet Setup 03 - Dramatic Contrast"
-            class="w-full h-auto object-cover"
-            loading="lazy"
-          />
-          <div class="p-3 bg-white dark:bg-[#181818] border-t border-[#DCDCD8] dark:border-[#30302D] text-[11px] font-mono text-[#6B6B6B] dark:text-[#A3A3A0]">
-            Sheet 03: High-contrast low-key framing
-          </div>
+      <div class="rounded-lg overflow-hidden border border-[#D3D0C9] dark:border-[#26272B] bg-[#0D0E10]">
+        <img
+          src="/assets/projects/mens-jewellery/character-3.webp"
+          alt="Character Sheet Setup 03"
+          class="w-full aspect-[4/5] object-cover"
+          loading="lazy"
+        />
+        <div class="p-2.5 bg-white/60 dark:bg-[#151619] border-t border-[#D3D0C9] dark:border-[#26272B] text-[10.5px] font-mono text-[#555555] dark:text-[#A0A09B]">
+          03 // High-contrast low-key framing
         </div>
+      </div>
 
-        <div class="rounded-lg overflow-hidden border border-[#DCDCD8] dark:border-[#30302D] bg-[#0E0E10]">
-          <img
-            src="/assets/projects/mens-jewellery/character-4.webp"
-            alt="Character Sheet Setup 04 - Macro Eye & Chain Focal Pass"
-            class="w-full h-auto object-cover"
-            loading="lazy"
-          />
-          <div class="p-3 bg-white dark:bg-[#181818] border-t border-[#DCDCD8] dark:border-[#30302D] text-[11px] font-mono text-[#6B6B6B] dark:text-[#A3A3A0]">
-            Sheet 04: Macro depth-of-field check
-          </div>
+      <div class="rounded-lg overflow-hidden border border-[#D3D0C9] dark:border-[#26272B] bg-[#0D0E10]">
+        <img
+          src="/assets/projects/mens-jewellery/character-4.webp"
+          alt="Character Sheet Setup 04"
+          class="w-full aspect-[4/5] object-cover"
+          loading="lazy"
+        />
+        <div class="p-2.5 bg-white/60 dark:bg-[#151619] border-t border-[#D3D0C9] dark:border-[#26272B] text-[10.5px] font-mono text-[#555555] dark:text-[#A0A09B]">
+          04 // Macro chain focus pass
         </div>
+      </div>
 
-        <div class="rounded-lg overflow-hidden border border-[#DCDCD8] dark:border-[#30302D] bg-[#0E0E10]">
-          <img
-            src="/assets/projects/mens-jewellery/character-5.webp"
-            alt="Character Sheet Setup 05 - Silhouette & Wardrobe Anchor"
-            class="w-full h-auto object-cover"
-            loading="lazy"
-          />
-          <div class="p-3 bg-white dark:bg-[#181818] border-t border-[#DCDCD8] dark:border-[#30302D] text-[11px] font-mono text-[#6B6B6B] dark:text-[#A3A3A0]">
-            Sheet 05: Wardrobe & necklace posture
-          </div>
+      <div class="rounded-lg overflow-hidden border border-[#D3D0C9] dark:border-[#26272B] bg-[#0D0E10]">
+        <img
+          src="/assets/projects/mens-jewellery/character-5.webp"
+          alt="Character Sheet Setup 05"
+          class="w-full aspect-[4/5] object-cover"
+          loading="lazy"
+        />
+        <div class="p-2.5 bg-white/60 dark:bg-[#151619] border-t border-[#D3D0C9] dark:border-[#26272B] text-[10.5px] font-mono text-[#555555] dark:text-[#A0A09B]">
+          05 // Wardrobe &amp; posture lock
         </div>
+      </div>
 
-        <div class="rounded-lg overflow-hidden border border-[#DCDCD8] dark:border-[#30302D] bg-[#0E0E10]">
-          <img
-            src="/assets/projects/mens-jewellery/prop-macro.webp"
-            alt="Jewelry Prop Macro Texture Reference"
-            class="w-full h-auto object-cover"
-            loading="lazy"
-          />
-          <div class="p-3 bg-white dark:bg-[#181818] border-t border-[#DCDCD8] dark:border-[#30302D] text-[11px] font-mono text-[#6B6B6B] dark:text-[#A3A3A0]">
-            Prop Detail: Macro metallic surface pass
-          </div>
+      <div class="rounded-lg overflow-hidden border border-[#D3D0C9] dark:border-[#26272B] bg-[#0D0E10]">
+        <img
+          src="/assets/projects/mens-jewellery/prop-macro.webp"
+          alt="Jewelry Prop Macro Texture Reference"
+          class="w-full aspect-[4/5] object-cover"
+          loading="lazy"
+        />
+        <div class="p-2.5 bg-white/60 dark:bg-[#151619] border-t border-[#D3D0C9] dark:border-[#26272B] text-[10.5px] font-mono text-[#555555] dark:text-[#A0A09B]">
+          06 // Prop macro metallic pass
         </div>
       </div>
     </div>
 
-    <!-- Verified Production Status -->
-    <div class="p-6 rounded-xl border border-[#DCDCD8] dark:border-[#30302D] bg-[#F7F7F5] dark:bg-[#141416] text-xs font-mono text-[#6B6B6B] dark:text-[#A3A3A0] flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <span class="w-2 h-2 rounded-full bg-[#10B981]"></span>
-        <span>1080P PRODUCTION MASTER // YOUTUBE STREAMING ACTIVE</span>
-      </div>
-      <span class="text-[#8E8E93] dark:text-[#777774]">VERIFIED EVIDENCE</span>
+    <!-- Technical Badges -->
+    <div class="p-4 rounded-lg border border-[#D3D0C9] dark:border-[#26272B] bg-white/40 dark:bg-[#151619] text-xs font-mono text-[#555555] dark:text-[#A0A09B] flex items-center justify-between">
+      <span>1080P PRODUCTION MASTER // YOUTUBE STREAMING ACTIVE</span>
+      <span class="text-[#10B981] font-semibold">VERIFIED EVIDENCE</span>
     </div>
   </div>
 </CaseStudyLayout>
-
-<script is:inline>
-  document.addEventListener('DOMContentLoaded', () => {
-    const facade = document.getElementById('mensVideoFacade');
-    const mount = document.getElementById('mensIframeMount');
-    const btn = document.getElementById('activateMensVideoBtn');
-
-    function activate() {
-      if (!mount || mount.querySelector('iframe')) return;
-      const iframe = document.createElement('iframe');
-      iframe.src = 'https://www.youtube-nocookie.com/embed/h6nyN1gyFvI?autoplay=1';
-      iframe.title = "Men's Jewellery Luxury Commercial Master";
-      iframe.className = 'w-full h-full border-0';
-      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
-      iframe.allowFullscreen = true;
-      iframe.loading = 'lazy';
-      mount.appendChild(iframe);
-      if (facade) facade.style.display = 'none';
-    }
-
-    if (facade) facade.addEventListener('click', activate);
-    if (btn) {
-      btn.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          activate();
-        }
-      });
-    }
-  });
-</script>

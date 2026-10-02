@@ -1,0 +1,124 @@
+---
+import CaseStudyLayout from '../../components/CaseStudyLayout.astro';
+import VideoFacade from '../../components/VideoFacade.astro';
+import { aiContentProjects } from '../../data/projects';
+
+const project = aiContentProjects.find(p => p.id === 'ai-ugc-cars')!;
+---
+
+<CaseStudyLayout project={project}>
+  <!-- Hero Media Slot: 16:9 Video Facade -->
+  <div slot="hero-media" class="space-y-6">
+    <div class="rounded-xl border border-[#D3D0C9] dark:border-[#26272B] bg-[#0D0E10] overflow-hidden shadow-2xl p-4 sm:p-8">
+      <div class="flex items-center justify-between text-xs font-mono text-[#A0A09B] mb-4 pb-3 border-b border-[#26272B]">
+        <span class="text-white font-semibold">AI_UGC_CARS_COMMERCIAL_1080P</span>
+        <span class="text-[#315CFF]">16:9 AUTOMOTIVE MASTER</span>
+      </div>
+
+      <VideoFacade
+        videoId="4OgE5mzghfI"
+        title="AI UGC for Cars Commercial"
+        posterJpg="/assets/projects/ai-ugc-cars/hero-poster.jpg"
+        posterWebp="/assets/projects/ai-ugc-cars/hero-poster.webp"
+        isVertical={false}
+      />
+
+      <div class="flex items-center justify-between text-[11px] font-mono text-[#A0A09B] mt-4 pt-3 border-t border-[#26272B]">
+        <span>Vehicle Paint Reflections, Natural Lighting &amp; High-Speed Motion</span>
+        <a
+          href={project.video}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-[#315CFF] hover:underline"
+        >
+          Watch on YouTube ↗
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pipeline Architecture Slot -->
+  <div slot="diagram" class="space-y-6">
+    <div class="text-xs font-mono uppercase tracking-[0.2em] text-[#315CFF] font-bold">
+      AUTOMOTIVE AI PIPELINE // CURVED PANELS &amp; ROTATIONAL VELOCITY
+    </div>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-mono">
+      <div class="p-4 rounded-lg border border-[#D3D0C9] dark:border-[#26272B] bg-white/40 dark:bg-[#151619]">
+        <div class="text-[#315CFF] font-bold mb-1">01 / GEOMETRY</div>
+        <div class="text-sm font-bold text-[#111111] dark:text-[#F3F1EC] mb-1 font-sans">Curved Reflection Passes</div>
+        <p class="text-[#555555] dark:text-[#A0A09B] leading-relaxed font-sans">
+          Locking horizon line glints across body panels without surface warping.
+        </p>
+      </div>
+
+      <div class="p-4 rounded-lg border border-[#D3D0C9] dark:border-[#26272B] bg-white/40 dark:bg-[#151619]">
+        <div class="text-[#315CFF] font-bold mb-1">02 / PHYSICS</div>
+        <div class="text-sm font-bold text-[#111111] dark:text-[#F3F1EC] mb-1 font-sans">Wheel Motion Constraint</div>
+        <p class="text-[#555555] dark:text-[#A0A09B] leading-relaxed font-sans">
+          Preventing spoke melting during high-speed highway and track tracking shots.
+        </p>
+      </div>
+
+      <div class="p-4 rounded-lg border border-[#D3D0C9] dark:border-[#26272B] bg-white/40 dark:bg-[#151619]">
+        <div class="text-[#10B981] font-bold mb-1">03 / AUDIO</div>
+        <div class="text-sm font-bold text-[#111111] dark:text-[#F3F1EC] mb-1 font-sans">Engine Foley &amp; Pacing</div>
+        <p class="text-[#555555] dark:text-[#A0A09B] leading-relaxed font-sans">
+          Multi-track engine acceleration audio layered with paid social hook cuts.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Evidence Slot: Vehicle Extraction Frames -->
+  <div slot="evidence" class="space-y-6">
+    <div class="text-xs font-mono uppercase tracking-[0.2em] text-[#315CFF] font-bold">
+      VERIFIED AUTOMOTIVE FRAMES // 4K PRODUCTION TAKES
+    </div>
+
+    <!-- 3 Frames Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="rounded-lg overflow-hidden border border-[#D3D0C9] dark:border-[#26272B] bg-[#0D0E10]">
+        <img
+          src="/assets/projects/ai-ugc-cars/car-frame-1.webp"
+          alt="Automotive Frame 01 - Exterior Angle"
+          class="w-full aspect-video object-cover"
+          loading="lazy"
+        />
+        <div class="p-2.5 bg-white/60 dark:bg-[#151619] border-t border-[#D3D0C9] dark:border-[#26272B] text-[10.5px] font-mono text-[#555555] dark:text-[#A0A09B]">
+          01 // Exterior sun glint &amp; paint reflection
+        </div>
+      </div>
+
+      <div class="rounded-lg overflow-hidden border border-[#D3D0C9] dark:border-[#26272B] bg-[#0D0E10]">
+        <img
+          src="/assets/projects/ai-ugc-cars/car-frame-2.webp"
+          alt="Automotive Frame 02 - Speed Dynamics"
+          class="w-full aspect-video object-cover"
+          loading="lazy"
+        />
+        <div class="p-2.5 bg-white/60 dark:bg-[#151619] border-t border-[#D3D0C9] dark:border-[#26272B] text-[10.5px] font-mono text-[#555555] dark:text-[#A0A09B]">
+          02 // High-speed road tracking pass
+        </div>
+      </div>
+
+      <div class="rounded-lg overflow-hidden border border-[#D3D0C9] dark:border-[#26272B] bg-[#0D0E10]">
+        <img
+          src="/assets/projects/ai-ugc-cars/car-frame-3.webp"
+          alt="Automotive Frame 03 - Outdoor Horizon"
+          class="w-full aspect-video object-cover"
+          loading="lazy"
+        />
+        <div class="p-2.5 bg-white/60 dark:bg-[#151619] border-t border-[#D3D0C9] dark:border-[#26272B] text-[10.5px] font-mono text-[#555555] dark:text-[#A0A09B]">
+          03 // Environmental lighting integration
+        </div>
+      </div>
+    </div>
+
+    <!-- Verified Badge -->
+    <div class="p-4 rounded-lg border border-[#D3D0C9] dark:border-[#26272B] bg-white/40 dark:bg-[#151619] text-xs font-mono text-[#555555] dark:text-[#A0A09B] flex items-center justify-between">
+      <span>1080P/4K CONFORMED COMMERCIAL SPOT</span>
+      <span class="text-[#10B981] font-semibold">VERIFIED PRODUCTION</span>
+    </div>
+  </div>
+</CaseStudyLayout>

@@ -5,6 +5,9 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   site: 'https://kanishkroy.com',
   output: 'static',
+  redirects: {
+    '/work/ai-ad-production': '/work/adidas-samba'
+  },
   devToolbar: {
     enabled: false
   },

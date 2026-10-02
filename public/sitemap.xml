@@ -11,12 +11,27 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://kanishkroy.com/about</loc>
+    <loc>https://kanishkroy.com/work/adidas-samba</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://kanishkroy.com/work/kreo-tech</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kanishkroy.com/contact</loc>
+    <loc>https://kanishkroy.com/work/mens-jewellery</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kanishkroy.com/work/ai-ugc-reel</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kanishkroy.com/work/ai-ugc-cars</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -26,22 +41,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kanishkroy.com/work/ai-ad-production</loc>
+    <loc>https://kanishkroy.com/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kanishkroy.com/work/ai-research-analyst</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://kanishkroy.com/work/wellbeing-nutrition</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://kanishkroy.com/work/cleanpdf</loc>
+    <loc>https://kanishkroy.com/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

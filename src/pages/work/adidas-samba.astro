@@ -1,0 +1,81 @@
+---
+import CaseStudyLayout from '../../components/CaseStudyLayout.astro';
+import VideoFacade from '../../components/VideoFacade.astro';
+import { aiContentProjects } from '../../data/projects';
+
+const project = aiContentProjects.find(p => p.id === 'adidas-samba')!;
+---
+
+<CaseStudyLayout project={project}>
+  <!-- Hero Media Slot: Vertical Commercial Facade in Responsive Stage -->
+  <div slot="hero-media" class="space-y-6">
+    <div class="rounded-xl border border-[#D3D0C9] dark:border-[#26272B] bg-[#0D0E10] overflow-hidden shadow-2xl p-4 sm:p-8">
+      <div class="flex items-center justify-between text-xs font-mono text-[#A0A09B] mb-4 pb-3 border-b border-[#26272B]">
+        <span class="text-white font-semibold">ADIDAS_SAMBA_COMMERCIAL_1080P</span>
+        <span class="text-[#315CFF]">9:16 VERTICAL COMMERCIAL REEL</span>
+      </div>
+
+      <div class="flex justify-center">
+        <VideoFacade
+          videoId={project.videoId!}
+          title="Adidas Samba AI Commercial"
+          posterJpg="/assets/projects/ai-ad-production/adidas-samba-poster.jpg"
+          posterWebp="/assets/projects/ai-ad-production/adidas-samba-poster.webp"
+          isVertical={true}
+          class="max-w-[340px]"
+        />
+      </div>
+
+      <div class="flex items-center justify-between text-[11px] font-mono text-[#A0A09B] mt-4 pt-3 border-t border-[#26272B]">
+        <span>Photorealistic Tumbled Leather Macro Focus</span>
+        <a
+          href={project.video}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-[#315CFF] hover:underline"
+        >
+          Watch on YouTube ↗
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pipeline Diagram Slot -->
+  <div slot="diagram" class="space-y-6">
+    <div class="text-xs font-mono uppercase tracking-[0.2em] text-[#315CFF] font-bold">
+      PRODUCTION PIPELINE // STORYBOARD &amp; PROMPT ARCHITECTURE
+    </div>
+    
+    <div class="rounded-xl overflow-hidden border border-[#D3D0C9] dark:border-[#26272B] bg-[#0D0E10]">
+      <img
+        src="/assets/projects/ai-ad-production/pipeline-visual.svg"
+        alt="13-Stage Commercial Pipeline Architecture"
+        class="w-full h-auto"
+        loading="lazy"
+      />
+    </div>
+    <p class="text-xs font-mono text-[#555555] dark:text-[#A0A09B]">
+      Multi-phase production pipeline: locking camera focal lengths in storyboard pre-vis prior to generative iteration.
+    </p>
+  </div>
+
+  <!-- Evidence Slot: 2K Storyboard Grid -->
+  <div slot="evidence" class="space-y-6">
+    <div class="text-xs font-mono uppercase tracking-[0.2em] text-[#315CFF] font-bold">
+      VERIFIED PRE-VISUALIZATION // 2K STORYBOARD GRID
+    </div>
+
+    <div class="rounded-xl overflow-hidden border border-[#D3D0C9] dark:border-[#26272B] bg-[#0D0E10]">
+      <img
+        src="/assets/projects/ai-ad-production/storyboard-samba.jpeg"
+        alt="Adidas Samba 2K Storyboard Sequence"
+        class="w-full h-auto"
+        loading="lazy"
+      />
+    </div>
+    <div class="p-4 rounded-lg border border-[#D3D0C9] dark:border-[#26272B] bg-white/40 dark:bg-[#151619] text-xs font-mono text-[#555555] dark:text-[#A0A09B] flex items-center justify-between">
+      <span>1080P MASTER CUT CONFORMED IN PREMIERE PRO</span>
+      <span class="text-[#10B981] font-semibold">VERIFIED PRODUCTION</span>
+    </div>
+  </div>
+</CaseStudyLayout>

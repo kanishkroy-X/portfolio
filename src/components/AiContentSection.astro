@@ -1,0 +1,96 @@
+---
+import VideoFacade from './VideoFacade.astro';
+import { aiContentProjects } from '../data/projects';
+---
+
+<section id="ai-content" class="py-20 md:py-28 border-b border-[#D3D0C9] dark:border-[#26272B] transition-colors">
+  <div class="max-w-[1320px] mx-auto px-6">
+    <!-- Section Heading -->
+    <div class="mb-16 md:mb-20">
+      <div class="text-xs font-mono tracking-[0.24em] uppercase text-[#315CFF] font-bold mb-3">
+        01 // AI CONTENT
+      </div>
+      <h2 class="text-3xl sm:text-5xl font-extrabold text-[#111111] dark:text-[#F3F1EC] tracking-tight leading-[1.08] mb-3">
+        Commercials, UGC and visual experiments built with AI.
+      </h2>
+      <p class="text-base sm:text-lg text-[#555555] dark:text-[#A0A09B] max-w-2xl font-sans">
+        Broadcast-grade brand films, social-first UGC, and macro product cinematography engineered through precise prompt architecture and frame-accurate timeline editing.
+      </p>
+    </div>
+
+    <!-- Projects List in Exact Prescribed Order -->
+    <div class="space-y-24 md:space-y-32">
+      {aiContentProjects.map((project, index) => {
+        const isEven = index % 2 === 1;
+        return (
+          <article class="relative">
+            <div class={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center`}>
+              <!-- Large Media Presentation (Dominant) -->
+              <div class={`lg:col-span-8 ${isEven ? 'lg:order-2' : 'lg:order-1'}`}>
+                {project.videoId ? (
+                  <VideoFacade
+                    videoId={project.videoId}
+                    title={project.title}
+                    posterJpg={project.heroMedia.replace('.webp', '.jpg')}
+                    posterWebp={project.heroMedia}
+                    isVertical={false}
+                  />
+                ) : (
+                  <div class="relative rounded-lg overflow-hidden border border-[#D3D0C9] dark:border-[#26272B] bg-[#0D0E10] aspect-video">
+                    <img
+                      src={project.heroMedia}
+                      alt={project.title}
+                      class="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                )}
+              </div>
+
+              <!-- Minimal Metadata & CTA -->
+              <div class={`lg:col-span-4 flex flex-col justify-center ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
+                <!-- Number & Category -->
+                <div class="flex items-center gap-3 text-xs font-mono uppercase tracking-[0.2em] text-[#555555] dark:text-[#A0A09B] mb-3">
+                  <span class="text-[#111111] dark:text-[#F3F1EC] font-bold">{project.number}</span>
+                  <span class="text-[#D3D0C9] dark:text-[#26272B]">/</span>
+                  <span class="text-[#315CFF] font-semibold">{project.category}</span>
+                </div>
+
+                <!-- Title -->
+                <h3 class="text-2xl sm:text-3xl lg:text-[34px] font-bold text-[#111111] dark:text-[#F3F1EC] tracking-tight leading-[1.12] mb-4">
+                  <a
+                    href={`/work/${project.slug}`}
+                    class="hover:text-[#315CFF] transition-colors"
+                  >
+                    {project.title}
+                  </a>
+                </h3>
+
+                <!-- Short Description -->
+                <p class="text-sm sm:text-base text-[#555555] dark:text-[#A0A09B] leading-relaxed mb-6 font-sans">
+                  {project.shortDescription}
+                </p>
+
+                <!-- Tools / Pipeline Spec -->
+                <div class="text-[11px] font-mono text-[#7B8798] dark:text-[#8E99A8] uppercase tracking-wider mb-8">
+                  {project.technologies.slice(0, 4).join('  •  ')}
+                </div>
+
+                <!-- View Project Link -->
+                <div>
+                  <a
+                    href={`/work/${project.slug}`}
+                    class="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-[0.14em] uppercase text-[#111111] dark:text-[#F3F1EC] hover:text-[#315CFF] group transition-colors"
+                  >
+                    <span>VIEW PROJECT</span>
+                    <span class="group-hover:translate-x-1 transition-transform">→</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        );
+      })}
+    </div>
+  </div>
+</section>

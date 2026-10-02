@@ -1,34 +1,40 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { projects } from '../../data/projects';
+import { aiContentProjects, productProjects } from '../../data/projects';
 ---
 
 <BaseLayout
-  title="Selected Work & Systems Archive | Kanishk Roy"
-  description="Comprehensive archive of digital products, real-time edge applications, AI commercial video pipelines, and research intelligence systems by Kanishk Roy."
+  title="Selected Work — AI Content & Production Systems | Kanishk Roy"
+  description="Commercial AI video campaigns, social UGC sequences, and real-time product systems by Kanishk Roy."
 >
   <div class="max-w-[1320px] mx-auto px-6 py-16 md:py-24 transition-colors">
     <!-- Archive Header -->
     <div class="max-w-3xl mb-16">
-      <div class="text-xs font-mono text-[#3157FF] dark:text-[#6B82FF] tracking-[0.2em] uppercase font-bold mb-3">
-        SYSTEMS ARCHIVE // 2025–2026
+      <div class="text-xs font-mono text-[#315CFF] tracking-[0.24em] uppercase font-bold mb-3">
+        SELECTED WORK // 2026
       </div>
-      <h1 class="text-4xl sm:text-6xl font-extrabold text-[#111111] dark:text-[#F5F5F2] tracking-tight leading-[1.08] mb-6">
-        Selected Work
+      <h1 class="text-4xl sm:text-6xl font-extrabold text-[#111111] dark:text-[#F3F1EC] tracking-tight leading-[1.05] mb-4">
+        AI Content &amp; Systems
       </h1>
-      <p class="text-lg sm:text-xl text-[#6B6B6B] dark:text-[#A3A3A0] leading-relaxed">
-        Production applications, generative AI video campaigns, and research engines built with an emphasis on evidence, speed, and real-world execution.
+      <p class="text-base sm:text-lg text-[#555555] dark:text-[#A0A09B] leading-relaxed font-sans">
+        Commercial video campaigns, high-converting social UGC sequences, and real-time distributed software systems built with high aesthetic standards and production rigor.
       </p>
     </div>
 
-    <!-- Project Archive Grid -->
-    <div class="space-y-12">
-      {projects.map(project => (
-        <article class="p-6 sm:p-10 rounded-xl border border-[#DCDCD8] dark:border-[#30302D] bg-white dark:bg-[#181818] hover:border-[#3157FF]/60 dark:hover:border-[#6B82FF]/60 hover:shadow-xs transition-all duration-300">
+    <!-- 01 / AI Content Section Header -->
+    <div class="mb-8 pb-3 border-b border-[#D3D0C9] dark:border-[#26272B] flex items-center justify-between text-xs font-mono">
+      <span class="text-[#315CFF] font-bold tracking-widest uppercase">01 // AI CONTENT</span>
+      <span class="text-[#555555] dark:text-[#A0A09B] uppercase">5 COMMERCIAL CAMPAIGNS</span>
+    </div>
+
+    <!-- AI Content Projects Archive Grid -->
+    <div class="space-y-10 mb-20">
+      {aiContentProjects.map(project => (
+        <article class="p-6 sm:p-8 rounded-lg border border-[#D3D0C9] dark:border-[#26272B] bg-white/50 dark:bg-[#151619] hover:border-[#111111] dark:hover:border-[#F3F1EC] transition-all duration-300">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <!-- Media Preview -->
             <div class="lg:col-span-5 order-2 lg:order-1">
-              <a href={`/work/${project.slug}`} class="block rounded-lg overflow-hidden border border-[#DCDCD8] dark:border-[#30302D] bg-[#0E0E10] aspect-[16/10] group">
+              <a href={`/work/${project.slug}`} class="block rounded overflow-hidden border border-[#D3D0C9] dark:border-[#26272B] bg-[#0D0E10] aspect-[16/10] group">
                 <img
                   src={project.heroMedia}
                   alt={project.title}
@@ -40,39 +46,98 @@ import { projects } from '../../data/projects';
 
             <!-- Project Details -->
             <div class="lg:col-span-7 order-1 lg:order-2 flex flex-col justify-center">
-              <div class="flex items-center gap-3 text-xs font-mono text-[#6B6B6B] dark:text-[#A3A3A0] mb-2">
-                <span class="text-[#3157FF] dark:text-[#6B82FF] font-bold">PROJECT {project.number}</span>
+              <div class="flex items-center gap-2 text-xs font-mono text-[#555555] dark:text-[#A0A09B] mb-2">
+                <span class="text-[#111111] dark:text-[#F3F1EC] font-bold">{project.number}</span>
+                <span>/</span>
+                <span class="text-[#315CFF] font-semibold">{project.category}</span>
                 <span>/</span>
                 <span>{project.year}</span>
-                <span>/</span>
-                <span class="text-[#111111] dark:text-[#F5F5F2] font-semibold">{project.category}</span>
               </div>
 
-              <h2 class="text-2xl sm:text-3xl font-bold text-[#111111] dark:text-[#F5F5F2] mb-3">
-                <a href={`/work/${project.slug}`} class="hover:text-[#3157FF] dark:hover:text-[#6B82FF] transition-colors">
+              <h2 class="text-2xl sm:text-3xl font-bold text-[#111111] dark:text-[#F3F1EC] mb-2">
+                <a href={`/work/${project.slug}`} class="hover:text-[#315CFF] transition-colors">
                   {project.title}
                 </a>
               </h2>
 
-              <p class="text-sm sm:text-base text-[#6B6B6B] dark:text-[#A3A3A0] leading-relaxed mb-6">
+              <p class="text-sm text-[#555555] dark:text-[#A0A09B] leading-relaxed mb-5 font-sans">
                 {project.shortDescription}
               </p>
 
-              <!-- Tech stack pills -->
-              <div class="flex flex-wrap gap-2 mb-6">
-                {project.technologies.map(tech => (
-                  <span class="text-[11.5px] font-mono px-2.5 py-1 rounded bg-[#F7F7F5] dark:bg-[#202020] border border-[#DCDCD8] dark:border-[#30302D] text-[#111111] dark:text-[#F5F5F2]">
-                    {tech}
-                  </span>
-                ))}
+              <!-- Technologies -->
+              <div class="text-[11px] font-mono text-[#7B8798] dark:text-[#8E99A8] uppercase tracking-wider mb-6">
+                {project.technologies.slice(0, 5).join('  •  ')}
               </div>
 
               <div>
                 <a
                   href={`/work/${project.slug}`}
-                  class="inline-flex items-center gap-2 text-sm font-mono font-semibold text-[#111111] dark:text-[#F5F5F2] hover:text-[#3157FF] dark:hover:text-[#6B82FF] group transition-colors"
+                  class="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-[0.14em] uppercase text-[#111111] dark:text-[#F3F1EC] hover:text-[#315CFF] group transition-colors"
                 >
-                  <span>View Case Study &amp; Architecture</span>
+                  <span>VIEW PROJECT</span>
+                  <span class="group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <!-- 02 / Product / AI Systems Header -->
+    <div class="mb-8 pb-3 border-b border-[#D3D0C9] dark:border-[#26272B] flex items-center justify-between text-xs font-mono">
+      <span class="text-[#315CFF] font-bold tracking-widest uppercase">02 // PRODUCT / AI SYSTEMS</span>
+      <span class="text-[#555555] dark:text-[#A0A09B] uppercase">PRODUCTION SYSTEMS</span>
+    </div>
+
+    <!-- Product Projects Archive Grid -->
+    <div class="space-y-10">
+      {productProjects.map(project => (
+        <article class="p-6 sm:p-8 rounded-lg border border-[#D3D0C9] dark:border-[#26272B] bg-white/50 dark:bg-[#151619] hover:border-[#111111] dark:hover:border-[#F3F1EC] transition-all duration-300">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <!-- Media Preview -->
+            <div class="lg:col-span-5 order-2 lg:order-1">
+              <a href={`/work/${project.slug}`} class="block rounded overflow-hidden border border-[#D3D0C9] dark:border-[#26272B] bg-[#0D0E10] aspect-[16/10] group">
+                <img
+                  src={project.heroMedia}
+                  alt={project.title}
+                  class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+
+            <!-- Project Details -->
+            <div class="lg:col-span-7 order-1 lg:order-2 flex flex-col justify-center">
+              <div class="flex items-center gap-2 text-xs font-mono text-[#555555] dark:text-[#A0A09B] mb-2">
+                <span class="text-[#111111] dark:text-[#F3F1EC] font-bold">{project.number}</span>
+                <span>/</span>
+                <span class="text-[#315CFF] font-semibold">{project.category}</span>
+                <span>/</span>
+                <span>{project.year}</span>
+              </div>
+
+              <h2 class="text-2xl sm:text-3xl font-bold text-[#111111] dark:text-[#F3F1EC] mb-2">
+                <a href={`/work/${project.slug}`} class="hover:text-[#315CFF] transition-colors">
+                  {project.title}
+                </a>
+              </h2>
+
+              <p class="text-sm text-[#555555] dark:text-[#A0A09B] leading-relaxed mb-5 font-sans">
+                {project.shortDescription}
+              </p>
+
+              <!-- Technologies -->
+              <div class="text-[11px] font-mono text-[#7B8798] dark:text-[#8E99A8] uppercase tracking-wider mb-6">
+                {project.technologies.slice(0, 5).join('  •  ')}
+              </div>
+
+              <div>
+                <a
+                  href={`/work/${project.slug}`}
+                  class="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-[0.14em] uppercase text-[#111111] dark:text-[#F3F1EC] hover:text-[#315CFF] group transition-colors"
+                >
+                  <span>VIEW CASE STUDY</span>
                   <span class="group-hover:translate-x-1 transition-transform">→</span>
                 </a>
               </div>
